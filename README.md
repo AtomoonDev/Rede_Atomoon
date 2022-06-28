@@ -1,13 +1,13 @@
   <div>
-    <img align="center" alt="Logo da Marca - Atomoon" width="400" src="https://user-images.githubusercontent.com/53992405/176083452-508fa6dc-9cd8-4d44-aaae-e71a1c3470eb.svg" />
+    <img align="center" alt="Logo da Marca - Atomoon" width="300" src="https://user-images.githubusercontent.com/53992405/176083452-508fa6dc-9cd8-4d44-aaae-e71a1c3470eb.svg" />
     <img align="center" alt="Foto da Lua"  height="70" width="70" src="https://user-images.githubusercontent.com/53992405/176083448-76a0f084-a0ed-43f4-9bcd-20c77eb3ad9e.svg"/>
 </div>
 
 # TCC-Atomoon_Javascript
 
-Este repositorio é o conjunto de aplicações que compôem a nossa rede Atomoon, esse mesmo projeto foi desenvolvido em trio, durante as matérias de Trabalho Profissional de Conclusão de Curso I e II, com orientações dos professores André e Chico no COTUCA.
+Este repositório é o conjunto de aplicações que compõem a nossa rede Atomoon, esse mesmo projeto foi desenvolvido em trio, durante as matérias de Trabalho Profissional de Conclusão de Curso I e II, com orientações dos professores André e Chico no COTUCA.
 
-O projeto está em desenvolvimento e pretende desenvolver uma rede que possa trazer maior visibilidade aostrabalhadores autônomos, com enfoque em acessibilidade e extrema amplitude de trabalhos, de forma a garantir um espaço de trabalho profissional, em que se possa exercer e desenvolver suas habilidade profissionais, melhorando a sua busca e contato entre clientes/serviços. Como implementação final, visamos a integração do back-end com front-end, desenvolvimento web e mobile, e por fim, manter nossa rede online e funcional ao público, sendo trabalhadas as Linguagens HTML e CSS/JavaScript, Java e JSON, e ferramentas como Flutter, React, entre outras.
+O projeto está em desenvolvimento e pretende-se desenvolver uma rede que possa trazer maior visibilidade aos trabalhadores autônomos, com enfoque em acessibilidade e extrema amplitude de trabalhos, de forma a garantir um espaço de trabalho profissional, em que se possa exercer e desenvolver suas habilidades profissionais, melhorando a sua busca e contato entre clientes/serviços. Como implementação final, visamos a integração do back-end com front-end, desenvolvimento web e mobile, e por fim, manter nossa rede online e funcional ao público, sendo trabalhadas as Linguagens HTML e CSS/JavaScript, Java e JSON, e ferramentas como Flutter, React, entre outras.
 
 ## Contributing
 
