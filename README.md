@@ -5,14 +5,9 @@
 
 # TCC-Atomoon_Javascript
 
-Este repositorio é o conjunto de aplicações que compôem a nossa rede Atomoon, esse mesmo projeto foi 
-desenvolvido em trio, durante as matérias de Trabalho Profissional de Conclusão de Curso I e II, com orientações dos 
-professores André e Chico no COTUCA.
+Este repositorio é o conjunto de aplicações que compôem a nossa rede Atomoon, esse mesmo projeto foi desenvolvido em trio, durante as matérias de Trabalho Profissional de Conclusão de Curso I e II, com orientações dos professores André e Chico no COTUCA.
 
-O projeto está em desenvolvimento e pretende desenvolver uma rede que possa trazer maior visibilidade aos trabalhadores autônomos, com enfoque em acessibilidade e extrema amplitude de trabalhos, 
-de forma a garantir um  espaço de trabalho profissional, em que se possa exercer e desenvolver suas habilidade profissionais, melhorando a sua busca e 
-contato entre clientes/serviços. Como implementação final, visamos a integração do back-end com front-en, desenvolvimento web e mobile, e por fim, manter nossa 
-rede online e funcional ao público, sendo trabalhadas as Linguagens HTML e CSS/JavaScript, Java e JSON, e ferramentas como Flutter, React, entre outras.
+O projeto está em desenvolvimento e pretende desenvolver uma rede que possa trazer maior visibilidade aostrabalhadores autônomos, com enfoque em acessibilidade e extrema amplitude de trabalhos, de forma a garantir um espaço de trabalho profissional, em que se possa exercer e desenvolver suas habilidade profissionais, melhorando a sua busca e contato entre clientes/serviços. Como implementação final, visamos a integração do back-end com front-end, desenvolvimento web e mobile, e por fim, manter nossa rede online e funcional ao público, sendo trabalhadas as Linguagens HTML e CSS/JavaScript, Java e JSON, e ferramentas como Flutter, React, entre outras.
 
 ## Contributing
 
@@ -43,7 +38,7 @@ Fique à vontade para enviar sugestões, dicas ou até mesmo reconstruir o códi
 
 ## License
 
-This project is licensed under the [MIT License][license].
+This project is licensed under the [GNU GENERAL PUBLIC LICENSE Version 3][license].
 
 ---
 [github]: https://github.com/PuniGC
