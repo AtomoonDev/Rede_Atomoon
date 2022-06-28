@@ -38,7 +38,7 @@ Fique à vontade para enviar sugestões, dicas ou até mesmo reconstruir o códi
 
 ## License
 
-This project is licensed under the [GNU GENERAL PUBLIC LICENSE Version 3][license].
+This project is licensed under the [GNU GENERAL PUBLIC LICENSE][license].
 
 ---
 [github]: https://github.com/PuniGC
