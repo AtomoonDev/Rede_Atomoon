@@ -9,6 +9,7 @@
     <!-- http://127.0.0.1:5500/Atomoon_Javascript/src/index.html -->
 
     <!-- Materialize css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
 
@@ -22,40 +23,43 @@
         <div class="navbar-fixed">
             <nav class="nav-default">
                 <div class="colors-default">
-                    <ul id="navbar-items" class="right hide-on-med-and-down">
+                    <ul id="navbar-items" class="left hide-on-med-and-down">
                         <li>
-                            <a href="/">
-                                Produtos <i class="material-icons left">style</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a onclick=getStoreLocation()>
-                                Loja <i class="material-icons left">store</i>
+                            <a href="./index.html">
+                            Atomoon <i class="material-icons left">style</i>
                             </a>
                         </li>
                         <li>
                             <a onclick=sendEmail()>
-                                Contato <i class="material-icons left">email</i>
+                            Contato <i class="material-icons left">email</i>
                             </a>
                         </li>
 
                         <li>
-                            <a href="/">
-                                Perfil
+                            <a onclick=person()>
+                            Perfil <i class="material-icons left">person</i>
                             </a>
-                        </li>
-
-                        <li>
-                            <i class="material-icons left">person_filled</i>
-                            <button class="nav-btn2">
-                                <a href="/"> Register </a>
-                            </button>
-
-                            <button class="nav-btn">
-                                <a href="/"> Login </a>
-                            </button>
                         </li>
                     </ul>
+
+                    <ul id="navbar-items-login" class="right hide-on-med-and-down">
+                        <li>
+                        <div class="navbar-items-login-button">
+
+                            <button class="navbar-btn1">
+                                <a href="/"> REGISTRAR </a>
+
+                            </button>
+
+                            <button class="navbar-btn2">
+                                <a href="/"> LOGIN </a>
+                            </button>
+
+                        </div>
+
+                        </li>
+                    </ul>
+
                 </div>
             </nav>
         </div>
@@ -64,51 +68,54 @@
     <!-- Conteudo -->
     <main>
         <section class="conteudo-principal">
-            <div class="conteudo-principal-pesquisabox">
-                <input class="conteudo-principal-pesquisa" type="text" placeholder="Search..">
-            </div>
-            <div class="conteudo-principal-nome">
-                <img class="conteudo-img-atomoon brand-logo" style="height: 60px; width: 200px ;"
-                    src="./images/logo.svg">
-            </div>
-            <div class="conteudo-principal-subtitulo">
-                <p>O Website e agora aplicativo do seu coração</p>
-            </div>
-            <img class="conteudo-img-lua" src="./images/lua.svg">
+                <div class="search-box">
+                    <form action="/search">
+                        <input class="search-text" type="text" placeholder="O que você está procurando?" name="search">
+                    </form>
+                </div>
+
+                <div class="conteudo-principal-logo">
+                    <div class="row">
+                        <div class="left conteudo-principal-subtitulo">
+                            <img class="conteudo-img-atomoon brand-logo" src="./images/logo.svg">
+                            <p>O Website e agora aplicativo do seu coração</p>
+                        </div>
+                        <img class="right conteudo-img-lua" src="./images/lua.svg">
+                    </div>
+                </div>
+        </section>
+
+        <section class="conteudo-download">
 
         </section>
 
-        <section>
+        <section class="conteudo-categorias">
 
         </section>
     </main>
 
     <div class="col s12"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Rodape -->
+    <footer class="page-footer">
+        <div class="container">
+
+            <div class="row">
+                <ul class="test">
+                    <li><a href="https://www.instagram.com/https.mariiax/" target="_blank"> @HTTPS.MARIIAX</a></li>
+                    <li><a href="https://www.instagram.com/gabrielsants_dev/" target="_blank"> @GABRIELSANTS_DEV</a></li>
+                    <li><a href="https://www.instagram.com/theo_burgues/" target="_blank"> @THEO_BURGUES</a></li>
+                </ul>
+            </div>
+
+            <div class="arroba">
+                <p><b>ATOMOON ®</b></p>
+            </div>
+
+        </div>
+    </footer>
+
     <script src="./scripts/button.js"></script>
 </body>
-
-<!-- Rodape -->
-<footer class="page-footer">
-    <div class="container">
-
-        <div class="row">
-            <ul class="test">
-                <li><a href="https://www.instagram.com/https.mariiax/" target="_blank"> @HTTPS.MARIIAX
-                    </a></li>
-                <li><a href="https://www.instagram.com/gabrielsants_dev/" target="_blank"> @GABRIELSANTS_DEV
-                    </a></li>
-                    <li><a href="https://www.instagram.com/theo_burgues/" target="_blank"> @THEO_BURGUES
-                    </a></li>
-            </ul>
-        </div>
-
-        <div class="arroba">
-            <p><b>ATOMOON ®</b></p>
-        </div>
-
-    </div>
-</footer>
 
 </html>

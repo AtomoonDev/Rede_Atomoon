@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+
+/* conteúdo principal */
 body
 {
     background-color: #eee;
@@ -9,71 +13,147 @@ body
     height: 100%;
     margin-bottom: 10px;
 }
+
 .material-symbols-outlined {
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  padding: 0 2%;
-  display: flex;
-  
+    max-width: 120px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 2%;
+    display: flex;
 }
+
+/* Barra de navegação */
 nav {
     background-color: #FFD5BD;
 }
+
+.navbar-btn1{
+    border:3px solid black;
+    border-radius:5px;
+    display:inline-block;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:13px;
+    padding:6px 10px;
+    text-decoration:none;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.navbar-btn1 a{
+    color: black;
+}
+
+.navbar-btn2{
+    border:3px solid black;
+    border-radius:5px;
+    display:inline-block;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:13px;
+    padding:6px 10px;
+    text-decoration:none;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.navbar-btn2 a{
+    color:black;
+}
+
+/* Conteudo Principal */
 
 .conteudo-principal {
     background-color: #1F335C;
 }
 
-
-.conteudo-principal-pesquisabox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Barra de Pesquisa */
+.conteudo-principal .search-box {
+    float: center;
+    margin: 0px 10px 10px 400px;
+    padding: 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.conteudo-principal-pesquisa input[type=text] {
-    background-color: #eee;
-    width: 300px;
-    height: 40px;
+.conteudo-principal input[type=text] {
+    border: 1px solid grey;
+
+    width: 450px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 90px;
+
     font-size: 17px;
+
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+    border: 1px solid grey;
+    background: #f1f1f1;
+    outline: none;
+    letter-spacing: 0.75px;
+
+    padding: 1px;
+    text-indent: 1.5em;
+}
+
+
+/* Conteudo Nome da Empresa */
+.conteudo-principal-logo {
+    margin-left: 60px;
 }
 
 .conteudo-img-atomoon{
-    height: 198px;
-    left: 4.01%;
-    right: 67.81%;
-    top: calc(50% - 198px/2 - 1675px);
-    
-    font-family: 'Mochiy Pop One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100px;
+    height: 100px;
+    width: 400px;
+
     line-height: 72px;
-    /* or 72% */
-    
-    letter-spacing: -0.832px;
-    
     color: #000000;
-    
-    border: 2px solid #FFFFFF;
 }
 
-.conteudo-img-lua {
-    width: 300px;
-    height: 465px;
+.conteudo-principal-subtitulo p{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    max-width: 400px;
+
+    font-family: 'Manjari';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
 
     display: flex;
     align-items: center;
+    letter-spacing: -0.832px;
+
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Conteudo Imagem Lua */
+.conteudo-img-lua {
+    width: 484px;
+    height: 465px;
+    display: flex;
+    float: left;
     justify-content: right;
 }
 
+/* Rodape */
+
 .page-footer {
   position:fixed;
-    bottom: 0;
+  bottom: 0;
   left:0;
   width:100%;
-  height: 150px;
+  height: 110px;
   background-color: #1e1f21;
 }
 
@@ -81,32 +161,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .row .test li a{
     color: #eee;
     font-size: 15px;
- 
 }
 
 .arroba {
     color: #1379D7;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
-
-  
-.nav-btn{
-    color: red;
-    font-size: 40px;
-}
-
-.nav-btn2{
-    color: red;
-    font-size: 40px;
-}
-
-
-
-
