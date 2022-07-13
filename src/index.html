@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atomoon - Home</title>
-    <!-- http://127.0.0.1:5500/Atomoon_Javascript/src/index.html -->
+    <title>Atomoon</title>
+    <!-- Link para hospedagem local -->
+    <!-- http://localhost:5500/src/index.html -->
 
     <!-- Materialize css -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!-- Materialize script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,19 +28,19 @@
                 <div class="colors-default">
                     <ul id="navbar-items" class="left hide-on-med-and-down">
                         <li>
-                            <a href="./index.html">
-                            Atomoon <i class="material-icons left">style</i>
+                            <a href="./index.html" >
+                                <p1 class="p1" > Atomoon</p1><i  class="material-icons left">account_balance </i>
                             </a>
                         </li>
                         <li>
-                            <a onclick=sendEmail()>
-                            Contato <i class="material-icons left">email</i>
+                            <a href="./contato.html">
+                                <p1 class="p1" > Contato</p1><i class="material-icons left">mail_outline</i>
                             </a>
                         </li>
 
                         <li>
                             <a onclick=person()>
-                            Perfil <i class="material-icons left">person</i>
+                                <p1 class="p1" > Perfil</p1><i class="material-icons left">perm_identity</i>
                             </a>
                         </li>
                     </ul>
@@ -46,20 +49,17 @@
                         <li>
                         <div class="navbar-items-login-button">
 
-                            <button class="navbar-btn1">
-                                <a href="/"> REGISTRAR </a>
-
+                            <button class="navbar-btn-cadastro" >
+                                <a href="cadastro.html"> CADASTRAR </a>
                             </button>
 
-                            <button class="navbar-btn2">
-                                <a href="/"> LOGIN </a>
-                            </button>
+                            <button  class="navbar-btn-login" >
+                                <a href="login.html"> ENTRAR </a>
+                            </button> 
 
                         </div>
-
                         </li>
                     </ul>
-
                 </div>
             </nav>
         </div>
@@ -78,23 +78,45 @@
                     <div class="row">
                         <div class="left conteudo-principal-subtitulo">
                             <img class="conteudo-img-atomoon brand-logo" src="./images/logo.svg">
-                            <p>O Website e agora aplicativo do seu coração</p>
+                            <p>O Website e agora </p>
+                            <p>aplicativo do seu</p>
+                            <p> coração</p>
                         </div>
                         <img class="right conteudo-img-lua" src="./images/lua.svg">
                     </div>
                 </div>
         </section>
 
+        <section class="conteudo-onda">
+            <img class="center conteudo-img-onda-laranja" src="./images/onda-laranja.svg">
+            <img class="center conteudo-img-onda-azul" src="./images/onda-azul1.svg">
+        </section>
+
+        <div class="col s2">
+        </div>
+
         <section class="conteudo-download">
-
+            <img align=left class="left brand-logo conteudo-img-bola-azul" src="./images/bola-azul.svg">
+            <div class="right conteudo-img-fundo-celular">
+                <img class="right conteudo-img-fundo-celular brand-logo" src="./images/fundo-celular.svg">
+                <!-- <img class="conteudo-img-celular brand-logo" src="./images/celular.svg"> -->
+            </div>
         </section>
 
-        <section class="conteudo-categorias">
-
+        <section class="conteudo-equipe">
+            <img class="center conteudo-img-onda-foto" src="./images/foto-mari.png">
+            <img class="center conteudo-img-onda-foto" src="./images/foto-gabri.png">
+            <img class="center conteudo-img-onda-foto" src="./images/foto-tay.png">
         </section>
+
     </main>
 
-    <div class="col s12"></div>
+    <!-- Fotos -->
+    <div id="foto">
+        <form id="a" action="">
+            <img class="center conteudo-form-img-lua" src="./images/lua.svg">
+        </form>
+    </div>
 
     <!-- Rodape -->
     <footer class="page-footer">
@@ -113,9 +135,11 @@
             </div>
 
         </div>
+
     </footer>
 
     <script src="./scripts/button.js"></script>
+
 </body>
 
 </html>

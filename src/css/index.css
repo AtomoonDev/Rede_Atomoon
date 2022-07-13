@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
 
-/* conteúdo principal */
+
+/* Estilização Geral */
 body
 {
     background-color: #eee;
@@ -10,8 +11,17 @@ body
     font-size: 13px;
     font-weight: 300;
     line-height: 1.4;
+
+    max-width: 100%;
     height: 100%;
     margin-bottom: 10px;
+
+}
+
+main {
+    overflow: auto;
+    padding-bottom: 100px;
+
 }
 
 .material-symbols-outlined {
@@ -22,12 +32,48 @@ body
     display: flex;
 }
 
+/* Scroll bar */
+
+/* custom scrollbar
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #301be7;
+}*/
+
 /* Barra de navegação */
 nav {
     background-color: #FFD5BD;
 }
 
-.navbar-btn1{
+.material-icons{
+    color: rgb(0, 0, 0);
+}
+
+/* Texto dos icones */
+.p1 {
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    font-weight:bold;
+}
+
+/*btn */
+.navbar-btn-cadastro{
     border:3px solid black;
     border-radius:5px;
     display:inline-block;
@@ -42,13 +88,14 @@ nav {
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    margin-right:7px;
 }
 
-.navbar-btn1 a{
+.navbar-btn-cadastro a {
     color: black;
 }
 
-.navbar-btn2{
+.navbar-btn-login {
     border:3px solid black;
     border-radius:5px;
     display:inline-block;
@@ -63,30 +110,144 @@ nav {
     font-weight: 900;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    margin-right:18px;
 }
 
-.navbar-btn2 a{
+.navbar-btn-login a{
     color:black;
 }
 
+/*
+#btn{
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+#btn button{
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    width: 100%;
+    height: 40px;
+    border:none;
+    font-size: 1.2em;
+    color:black;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#btn button:hover{
+    background: linear-gradient(-45deg, rgb(18, 45, 99) ,  rgb(148, 168, 255));
+}
+*/
+
 /* Conteudo Principal */
 
+.conteudo-onda {
+    overflow: auto;
+    overflow-x: hidden;
+
+    width: 100%;
+    max-width: 100vw;
+
+    margin-bottom: Calc(100vh * 0.8);
+    width: 50%;
+}
+
+.conteudo-img-onda-laranja {
+    position: absolute;
+    z-index: 1;
+
+    width: 100vw;
+    width: 100%;
+    height: Calc(70vh * 1.15);
+
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.conteudo-img-onda-azul {
+    position: absolute;
+    z-index: 2;
+
+    width: 100vw;
+    width: 100%;
+    height: Calc(63vh * 1.2);
+    max-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
 .conteudo-principal {
-    background-color: #1F335C;
+    position: absolute;
+    z-index: 3;
+
+    top: 7%;
+    height: Calc(50vh * 0.8);
+    width: 100%;
+    background-color: #243A69;
+}
+
+/* Fotos */
+form#a {
+    left      : 50%;
+    top       : 50%;
+    position  : relative;
+    transform : translate(-50%, -50%);
+
+    height: 0.5%;
+    width:75%;
+    border-radius: 10px;
+    padding: 150px;
+    color: black;
+    box-shadow: 0 0 1em black;
+    background: black;
+}
+
+.conteudo-form-img-lua{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-25px;
+    margin-left:-25px;
+
+    left      : 50%;
+    top       : 50%;
+    transform : translate(-50%, -50%);
+
+    align-items: center;
+    padding-top: 90px;
+    height: 300px;
+    width: 300px;
 }
 
 /* Barra de Pesquisa */
 .conteudo-principal .search-box {
+    color: red;
+
     float: center;
-    margin: 0px 10px 10px 400px;
-    padding: 0;
+    margin: 0px 10px 00px 400px;
+    padding: 0px;
+
+    margin-top: 5px;
+
+    height: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .conteudo-principal input[type=text] {
-    border: 1px solid grey;
+    background: white;
+    color: black;
 
-    width: 450px;
+    width: 550px;
     height: 30px;
     margin-top: 15px;
     margin-bottom: 90px;
@@ -97,18 +258,18 @@ nav {
     transition: width 0.4s ease-in-out;
 
     border: 1px solid grey;
-    background: #f1f1f1;
     outline: none;
     letter-spacing: 0.75px;
 
     padding: 1px;
     text-indent: 1.5em;
-}
 
+}
 
 /* Conteudo Nome da Empresa */
 .conteudo-principal-logo {
     margin-left: 60px;
+    margin-top: 40px;
 }
 
 .conteudo-img-atomoon{
@@ -117,44 +278,101 @@ nav {
 
     line-height: 72px;
     color: #000000;
+    margin-left: 15px;
+    margin-top: 30px;
 }
 
 .conteudo-principal-subtitulo p{
     color: rgb(255, 255, 255);
     font-size: 30px;
-    max-width: 400px;
+    max-width: 600px;
 
     font-family: 'Manjari';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 64px;
-    line-height: 72px;
+    line-height: 1px;
 
     display: flex;
     align-items: center;
     letter-spacing: -0.832px;
+
+    margin-left: 15px;
+    margin-top: 50px;
 
     text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
 
 /* Conteudo Imagem Lua */
 .conteudo-img-lua {
-    width: 484px;
-    height: 465px;
+    aspect-ratio: 1 / 1;
+    width: 21%;
+    height: 21%;
+
     display: flex;
     float: left;
     justify-content: right;
+    margin-right: 60px;
+    margin-top: 1px;
 }
 
-/* Rodape */
+.conteudo-img-bola-azul{
+    width: 17%;
+    height: 17%;
 
+    left: 0;
+    right: 0;
+
+    line-height: 72px;
+    color: #000000;
+}
+
+.conteudo-img-fundo-celular{
+    position: absolute;
+    top: 50%;
+
+    bottom: 0;
+    right: 0;
+
+    margin-right: 10px;
+}
+
+.conteudo-img-celular{
+    width: 60%;
+    height: 100%;
+    right: 0;
+
+    line-height: 72px;
+    color: #000000;
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 0px );
+
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 10px solid hsla(0,0%,100%,.5);
+    background-color:  grey;
+    border-radius: 30px;
+    align-items: center;
+    color: black;
+    box-shadow: 0 0 1em black;
+}
+
+.conteudo-download{
+
+}
+/* Rodape */
 .page-footer {
-  position:fixed;
-  bottom: 0;
-  left:0;
-  width:100%;
-  height: 110px;
-  background-color: #1e1f21;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left:0;
+
+    width:100%;
+    height:120px;
+    background-color: #1e1f21;
+
+    clear: both;
 }
 
 .row .test{
