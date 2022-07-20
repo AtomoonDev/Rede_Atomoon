@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atomoon</title>
     <!-- Link para hospedagem local -->
-    <!-- http://localhost:5500/src/index.html -->
+    <!-- http://localhost:5500/Atomoon_Javascript/src/index.html -->
 
     <!-- Materialize css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -18,6 +18,8 @@
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -28,36 +30,31 @@
                 <div class="colors-default">
                     <ul id="navbar-items" class="left hide-on-med-and-down">
                         <li>
-                            <a href="./index.html" >
-                                <p1 class="p1" > Atomoon</p1><i  class="material-icons left">account_balance </i>
+                            <a href="./index.html">
+                                <p1 class="p1"> Atomoon</p1><i class="material-icons left">account_balance </i>
                             </a>
                         </li>
                         <li>
-                            <a href="./contato.html">
-                                <p1 class="p1" > Contato</p1><i class="material-icons left">mail_outline</i>
+                            <a href="http://linktr.ee/atomoon">
+                                <p1 class="p1"> Contato</p1><i class="material-icons left">mail_outline</i>
                             </a>
                         </li>
 
                         <li>
-                            <a onclick=person()>
-                                <p1 class="p1" > Perfil</p1><i class="material-icons left">perm_identity</i>
+                            <a href="./perfil.html">
+                                <p1 class="p1"> Perfil</p1><i class="material-icons left">perm_identity</i>
                             </a>
                         </li>
                     </ul>
 
                     <ul id="navbar-items-login" class="right hide-on-med-and-down">
+
                         <li>
-                        <div class="navbar-items-login-button">
 
-                            <button class="navbar-btn-cadastro" >
-                                <a href="cadastro.html"> CADASTRAR </a>
-                            </button>
-
-                            <button  class="navbar-btn-login" >
-                                <a href="login.html"> ENTRAR </a>
-                            </button> 
-
-                        </div>
+                            <div id="btn">
+                                <a class="btna" href="cadastro.html">Cadastrar</a>
+                                <a class="btna" href="login.html">Entrar</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -67,13 +64,16 @@
 
     <!-- Conteudo -->
     <main>
-        <section class="conteudo-principal">
+        <section>
+            <div class="conteudo-principal">
+                <!-- Barra de Pesquisa -->
                 <div class="search-box">
                     <form action="/search">
                         <input class="search-text" type="text" placeholder="O que você está procurando?" name="search">
                     </form>
                 </div>
 
+                <!-- Texto e Imagem do conteudo principal -->
                 <div class="conteudo-principal-logo">
                     <div class="row">
                         <div class="left conteudo-principal-subtitulo">
@@ -85,61 +85,126 @@
                         <img class="right conteudo-img-lua" src="./images/lua.svg">
                     </div>
                 </div>
-        </section>
+            </div>
 
-        <section class="conteudo-onda">
-            <img class="center conteudo-img-onda-laranja" src="./images/onda-laranja.svg">
-            <img class="center conteudo-img-onda-azul" src="./images/onda-azul1.svg">
-        </section>
-
-        <div class="col s2">
-        </div>
-
-        <section class="conteudo-download">
-            <img align=left class="left brand-logo conteudo-img-bola-azul" src="./images/bola-azul.svg">
-            <div class="right conteudo-img-fundo-celular">
-                <img class="right conteudo-img-fundo-celular brand-logo" src="./images/fundo-celular.svg">
-                <!-- <img class="conteudo-img-celular brand-logo" src="./images/celular.svg"> -->
+            <!-- Ondas de separacao -->
+            <div class="conteudo-onda">
+                <img class="center conteudo-img-onda-laranja" src="./images/onda-laranja.svg">
+                <img class="center conteudo-img-onda-azul" src="./images/onda-azul1.svg">
             </div>
         </section>
 
-        <section class="conteudo-equipe">
-            <img class="center conteudo-img-onda-foto" src="./images/foto-mari.png">
-            <img class="center conteudo-img-onda-foto" src="./images/foto-gabri.png">
-            <img class="center conteudo-img-onda-foto" src="./images/foto-tay.png">
+        <section>
+            <!-- Enfeite lado esquerdo -->
+            <img class="left brand-logo conteudo-img-bola-azul" src="./images/bola-azul.svg">
+            <!-- Exibicao celular -->
+            <div class="right conteudo-exibicao-celular" style="margin-right: 80px;">
+                <img class="conteudo-img-fundo-celular brand-logo" src="./images/fundo-celular.svg">
+                <img class="conteudo-img-celular brand-logo" src="./images/celular.svg">
+                <div>
+                    <a href="http://play.google.com/store/games?hl=pt_BR&gl=US" target="_blank">
+                        <img class="conteudo-img-botão-download" src="./images/google-play.svg">
+                    </a>
+                    <a href="http://www.apple.com/br/app-store/" target="_blank">
+                        <img class="conteudo-img-botão-download" src="./images/app-store.svg">
+                    </a>
+                </div>
+            </div>
         </section>
-
     </main>
 
     <!-- Fotos -->
-    <div id="foto">
-        <form id="a" action="">
-            <img class="center conteudo-form-img-lua" src="./images/lua.svg">
+    <section id="foto">
+        <form id="moon" action="">
+            <img class="center conteudo-form-img-lua" src="./images/lua_semborda.svg">
         </form>
-    </div>
+    </section>
+
+    <!-- Fotos da Equipe -->
+    <section class="center conteudo-equipe" style="margin-top: 100px;">
+        <div class="center conteudo-fotos">
+
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./images/foto-maria.jpg" alt="Flip Card">
+                </div>
+                <div class="card back-face">
+                    <img src="./images/foto-maria.jpg" alt="Flip Card">
+                    <div class="info">
+                        <div class="title">Desenvolvedora</div>
+                        <p>Entre em contato comigo <br>por meio das redes:</p>
+                    </div>
+                    <ul>
+                        <a href="https://www.instagram.com/https.mariiax/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/mariaxuxu" target="_blank"><i class="fa fa-github" style="font-size:15px"></i></a>
+                        <a href="https://twitter.com/mariipspsps" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=maria.clara.xuh@gmail.com&tf=cm"target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./images/foto-gabriel.jpg" alt="Flip Card">
+                </div>
+                <div class="card back-face">
+                    <img src="./images/foto-gabriel.jpg" alt="Flip Card">
+                    <div class="info">
+                        <div class="title">Desenvolvedor</div>
+                        <p>Entre em contato comigo <br>por meio das redes:</p>
+                    </div>
+                    <ul>
+                        <a href="https://www.instagram.com/gabrielsants_dev/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/PuniGC" target="_blank"><i class="fa fa-github" style="font-size:15px"></i></a>
+                        <a href="https://twitter.com/ForeverGSS" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=gabriel04.ok@gmail.com&tf=cm"
+                            target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="card front-face">
+                    <img src="./images/foto-taylor.jpeg" alt="Flip Card">
+                </div>
+                <div class="card back-face">
+                    <img src="./images/foto-taylor.jpeg" alt="Flip Card">
+                    <div class="info">
+                        <div class="title">Desenvolvedor</div>
+                        <p>Entre em contato comigo <br>por meio das redes:</p>
+                    </div>
+                    <ul>
+                         <a href="https://www.instagram.com/theo_burgues/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/taylorburgues" target="_blank"><i class="fa fa-github" style="font-size:15px"></i></a>
+                        <a href="https://twitter.com/theo_burgues" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=theo_xone@outlook.com&tf=cm"
+                            target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Rodape -->
-    <footer class="page-footer">
+    <footer class="page-footer" style="margin-top: 100px;">
         <div class="container">
-
             <div class="row">
                 <ul class="test">
                     <li><a href="https://www.instagram.com/https.mariiax/" target="_blank"> @HTTPS.MARIIAX</a></li>
-                    <li><a href="https://www.instagram.com/gabrielsants_dev/" target="_blank"> @GABRIELSANTS_DEV</a></li>
+                    <li><a href="https://www.instagram.com/gabrielsants_dev/" target="_blank"> @GABRIELSANTS_DEV</a>
+                    </li>
                     <li><a href="https://www.instagram.com/theo_burgues/" target="_blank"> @THEO_BURGUES</a></li>
                 </ul>
             </div>
-
             <div class="arroba">
                 <p><b>ATOMOON ®</b></p>
             </div>
 
         </div>
-
     </footer>
-
-    <script src="./scripts/button.js"></script>
-
 </body>
 
 </html>

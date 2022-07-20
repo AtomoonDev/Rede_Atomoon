@@ -30,7 +30,6 @@ form {
 
 .campo {
     padding-bottom: 14px;
-   
 }
 
 .title{
@@ -89,3 +88,5 @@ form {
 #btn button:hover{
     background: linear-gradient(-45deg, rgb(18, 45, 99) ,  rgb(148, 168, 255));
 }
+
+

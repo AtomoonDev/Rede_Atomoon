@@ -64,6 +64,7 @@ form {
 }
 
 #btn button{
+
     font-family: 'Poppins',sans-serif;
     background: linear-gradient(-45deg, rgb(8, 22, 49) , rgb(148, 168, 255));
     width: 100%;
@@ -79,3 +80,4 @@ form {
 #btn button:hover{
     background: linear-gradient(-45deg, rgb(18, 45, 99) ,  rgb(148, 168, 255));
 }
+
