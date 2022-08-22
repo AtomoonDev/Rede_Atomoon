@@ -1,40 +1,38 @@
+import 'package:atomoon/screens/telas.dart';
 import 'package:flutter/material.dart';
-import 'package:atomoon/screens/screens.dart';
+import 'package:atomoon/widget/colorsys.dart';
 
-const bgColor = Color(0xFFF5F5F5);
-const primaryColor = Color(0xFF00AFFF);
-
-const styleNameOfCompany = TextStyle(
+const styleNameOfTitle = TextStyle(
     fontSize: 28,
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: Colors.white,
     letterSpacing: -1.2);
 
-class Telas extends StatelessWidget {
-  const Telas({Key? key}) : super(key: key);
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colorsys.lightGrey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text('Atomoon', style: styleNameOfCompany),
+        backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
+        title: const Text('Atomoon', style: styleNameOfTitle),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.more_vert, color: Colors.white),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search, color: Colors.white),
+          ),
+        ],
       ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image:
-                  const AssetImage('lib/assets/images/fundo-telainicial.png'),
-              fit: BoxFit.fill,
-              colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.6),
-                BlendMode.darken,
-              )),
-        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -44,7 +42,7 @@ class Telas extends StatelessWidget {
                   const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
               child: const Center(
                   child: Text(
-                      'DEBUG: Telas do aplicativo',
+                      'Você veio em busca de trabalho ou em busca de trabalhadores',
                       style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'Poppins',
@@ -75,7 +73,7 @@ class Telas extends StatelessWidget {
                               builder: (context) => const Telas()),
                         );
                       },
-                      child: const Text('Bem-vindo'),
+                      child: const Text('Trabalho'),
                     )),
                 SizedBox(
                     width: 250.0,
@@ -94,36 +92,11 @@ class Telas extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const CategoriesScreen()),
+                              builder: (context) => const Telas()),
                         );
                       },
                       child: const Text(
-                        'Categorias',
-                        style: TextStyle(),
-                      ),
-                    )),
-                                    SizedBox(
-                    width: 250.0,
-                    height: 40.0,
-                    child: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        primary: Colors.white,
-                        side: BorderSide(color: Theme.of(context).primaryColor),
-                        backgroundColor: Colors.transparent,
-                        onSurface: Colors.white,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Test()),
-                        );
-                      },
-                      child: const Text(
-                        'Test',
+                        'Trabalhadores',
                         style: TextStyle(),
                       ),
                     )),
