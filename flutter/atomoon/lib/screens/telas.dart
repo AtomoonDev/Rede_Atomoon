@@ -102,7 +102,7 @@ class Telas extends StatelessWidget {
                         style: TextStyle(),
                       ),
                     )),
-                                    SizedBox(
+                    SizedBox(
                     width: 250.0,
                     height: 40.0,
                     child: OutlinedButton(
