@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:atomoon/screens/screens.dart';
+import 'package:atomoon/components/buttons.dart';
+import 'package:atomoon/screens/home/pages/home_page.dart';
 
 const bgColor = Color(0xFFF5F5F5);
 const primaryColor = Color(0xFF00AFFF);
@@ -43,8 +45,7 @@ class Telas extends StatelessWidget {
               margin:
                   const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
               child: const Center(
-                  child: Text(
-                      'DEBUG: Telas do aplicativo',
+                  child: Text('DEBUG: Telas do aplicativo',
                       style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'Poppins',
@@ -57,76 +58,48 @@ class Telas extends StatelessWidget {
               spacing: 20, // <-- Spacing between children
               children: [
                 SizedBox(
-                    width: 250.0,
-                    height: 40.0,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        primary: Colors.white,
-                        backgroundColor: Theme.of(context).primaryColor,
-                        onSurface: Colors.white,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
-                      ),
-                      onPressed: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Telas()),
-                        );
-                      },
-                      child: const Text('Bem-vindo'),
-                    )),
+                  width: 250.0,
+                  height: 40.0,
+                  child: RoundedDFBtn(
+                    text: 'Bem-vindo',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TypeOfWorkPage()),
+                      );
+                    },
+                  ),
+                ),
                 SizedBox(
-                    width: 250.0,
-                    height: 40.0,
-                    child: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        primary: Colors.white,
-                        side: BorderSide(color: Theme.of(context).primaryColor),
-                        backgroundColor: Colors.transparent,
-                        onSurface: Colors.white,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CategoriesScreen()),
-                        );
-                      },
-                      child: const Text(
-                        'Categorias',
-                        style: TextStyle(),
-                      ),
-                    )),
-                    SizedBox(
-                    width: 250.0,
-                    height: 40.0,
-                    child: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        primary: Colors.white,
-                        side: BorderSide(color: Theme.of(context).primaryColor),
-                        backgroundColor: Colors.transparent,
-                        onSurface: Colors.white,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Test()),
-                        );
-                      },
-                      child: const Text(
-                        'Test',
-                        style: TextStyle(),
-                      ),
-                    )),
+                  width: 250.0,
+                  height: 40.0,
+                  child: RoundedDFBtn(
+                    text: 'Categorias',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()),
+                      );
+                    },
+                    isOutlinedBtn: true,
+                  ),
+                ),
+                SizedBox(
+                  width: 250.0,
+                  height: 40.0,
+                  child: RoundedDFBtn(
+                    text: 'Test',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Test()),
+                      );
+                    },
+                    isOutlinedBtn: true,
+                  ),
+                )
               ],
             ),
           ],
