@@ -63,13 +63,16 @@ class _LoginState extends State<Login> {
                                     color: Color.fromRGBO(36, 58, 105, 1)),
                                 padding: EdgeInsets.all(5),
                               ),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(5)),
                             ),
                             validator: (String? value) {
                               if (value == null || value.isEmpty) {
                                 setState(() {
                                   shadowColor = Colors.transparent;
                                 });
-                                return 'E-mail Obrigatório';
+                                return 'E-mail obrigatório';
                               }
                               setState(() {
                                 shadowColor = Colors.black;
@@ -90,6 +93,9 @@ class _LoginState extends State<Login> {
                                 ),
                                 padding: EdgeInsets.all(5),
                               ),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(5)),
                               suffixIcon: IconButton(
                                   icon: Icon(
                                     Icons.remove_red_eye_outlined,
@@ -114,6 +120,17 @@ class _LoginState extends State<Login> {
                             obscureText: esconderTexto,
                           ),
                         ),
+                        Column(
+                          children: [
+                            TextButton(
+                              onPressed: () {}, 
+                            child: Text(
+                              "Esqueci minha senha",
+                              textAlign: TextAlign.right,
+                            )
+                            )
+                          ],
+                        ),
                         Container(
                           margin:
                               (EdgeInsets.only(top: 15, left: 25, right: 25)),
@@ -126,7 +143,7 @@ class _LoginState extends State<Login> {
                           child: TextButton(
                               child: Center(
                                 child: Text(
-                                  'Criar conta',
+                                  'Entrar',
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ),
