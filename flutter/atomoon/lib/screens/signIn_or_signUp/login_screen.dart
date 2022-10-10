@@ -43,6 +43,20 @@ class _LoginState extends State<Login> {
                       runSpacing: 20,
                       children: [
                         Container(
+                            alignment: Alignment.topCenter,
+                            padding: EdgeInsets.only(bottom: 10),
+                            child: Column(children: [
+                              Text(
+                                "Atomoon",
+                                style: TextStyle(
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 36, 58, 105),
+                                  letterSpacing: -1.2),
+                              ),
+                            ])),
+                        SizedBox(height: 15),
+                        Container(
                             alignment: Alignment.topLeft,
                             padding: EdgeInsets.only(bottom: 0),
                             child: Column(children: [
@@ -120,16 +134,17 @@ class _LoginState extends State<Login> {
                             obscureText: esconderTexto,
                           ),
                         ),
-                        Column(
-                          children: [
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child:
                             TextButton(
                               onPressed: () {}, 
                             child: Text(
                               "Esqueci minha senha",
                               textAlign: TextAlign.right,
+                              
                             )
                             )
-                          ],
                         ),
                         Container(
                           margin:
