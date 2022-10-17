@@ -64,7 +64,7 @@ class RegisterState extends State<Register> {
           setState(() {
             shadowColor = Colors.transparent;
           });
-          return 'Email obrigatório';
+          return 'E-mail obrigatório';
         }
         setState(() {
           shadowColor = Colors.black;

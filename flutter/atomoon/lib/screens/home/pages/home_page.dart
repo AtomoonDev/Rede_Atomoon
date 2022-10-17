@@ -152,6 +152,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget cards() {
+    /*
     List data;
     String rawJson =
         '[{"text":"Jardineiro","image": "lib/assets/images/card_img1.png"},' +
@@ -170,7 +171,7 @@ class HomePage extends StatelessWidget {
       itemBuilder: (context, index) {
         return Text(index.toString());
       },
-    );
+    );*/
 
     return Column(children: const [
       CategoryCard(
