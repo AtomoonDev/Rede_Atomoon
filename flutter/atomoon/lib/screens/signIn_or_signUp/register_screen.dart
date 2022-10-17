@@ -40,7 +40,7 @@ class RegisterState extends State<Register> {
           setState(() {
             shadowColor = Colors.transparent;
           });
-          return 'Nome Obrigatório';
+          return 'Nome obrigatório';
         }
         setState(() {
           shadowColor = Colors.black;
@@ -52,7 +52,7 @@ class RegisterState extends State<Register> {
   Widget _BuildEmailField() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'E-mail',
+        labelText: 'Email',
         prefixIcon: Padding(
           child:
               Icon(Icons.email_rounded, color: Color.fromRGBO(36, 58, 105, 1)),
@@ -64,7 +64,7 @@ class RegisterState extends State<Register> {
           setState(() {
             shadowColor = Colors.transparent;
           });
-          return 'Senha obrigatória';
+          return 'Email obrigatório';
         }
         setState(() {
           shadowColor = Colors.black;

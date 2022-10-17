@@ -25,7 +25,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   static const TextStyle opcaoEstilosa2 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.bold,
-    color: Colors.blue,
+    color: Color.fromRGBO(36, 58, 105, 1),
   );
   static const TextStyle opcaoEstilosa3 = TextStyle(
       fontSize: 30, fontWeight: FontWeight.bold, color: Colors.purple);
@@ -140,7 +140,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                                   indicator: const UnderlineTabIndicator(
                                     borderSide: const BorderSide(
                                       width: 3,
-                                      color: Colorsys.cyan,
+                                      color: Color.fromRGBO(36, 58, 105, 1),
                                     ),
                                     insets: EdgeInsets.only(
                                         left: 0, right: 75, top: 10),
