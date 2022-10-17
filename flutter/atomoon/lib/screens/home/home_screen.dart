@@ -50,8 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    int _selectedIndex = 0;
-
     return Scaffold(
       backgroundColor: Colorsys.lightGrey,
       appBar: appBar(),

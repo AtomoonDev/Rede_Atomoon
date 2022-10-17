@@ -238,18 +238,10 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         selectedFontSize: 14,
         unselectedFontSize: 12,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Inicio'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.chat),
-              label: 'Bate-papo'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
+          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Bate-papo'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
         ],
         selectedIconTheme: IconThemeData(color: Colors.amberAccent, size: 20),
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 1),
