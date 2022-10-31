@@ -70,7 +70,7 @@ class _LoginState extends State<Login> {
                           elevation: 8,
                           shadowColor: shadowColor,
                           child: TextFormField(
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               labelText: 'E-mail',
                               prefixIcon: Padding(
                                 child: Icon(Icons.email_rounded,
@@ -138,11 +138,11 @@ class _LoginState extends State<Login> {
                           alignment: Alignment.centerLeft,
                           child:
                             TextButton(
-                              onPressed: () {}, 
+                              onPressed: () {},
                             child: Text(
                               "Esqueci minha senha",
                               textAlign: TextAlign.right,
-                              
+
                             )
                             )
                         ),
