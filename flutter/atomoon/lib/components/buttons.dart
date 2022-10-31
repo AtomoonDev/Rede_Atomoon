@@ -17,7 +17,8 @@ class RoundedDFBtn extends StatelessWidget {
     return isOutlinedBtn
         ? OutlinedButton(
             style: OutlinedButton.styleFrom(
-              foregroundColor: Colors.white, side: BorderSide(color: Theme.of(context).primaryColor), disabledForegroundColor: Colors.white.withOpacity(0.38),
+              foregroundColor: Colors.white, side: BorderSide(color: Theme.of(context).primaryColor), 
+              disabledForegroundColor: Colors.white.withOpacity(0.38),
               backgroundColor: Colors.transparent,
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30))),

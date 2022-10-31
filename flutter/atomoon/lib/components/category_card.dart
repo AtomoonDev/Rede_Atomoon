@@ -1,3 +1,5 @@
+import 'package:atomoon/screens/home/home_screen.dart';
+import 'package:atomoon/screens/telas.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -13,29 +15,37 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: 160,
-        width: 500,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.0),
-          image: DecorationImage(
-              fit: BoxFit.fill,
-              image: image),
-        ),
-        child: Row(children: [
-          Card(
-            elevation: 0,
-            color: Colors.transparent,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 45),
-              child: Text(text,
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.7),
-                      fontFamily: 'Poppins',
-                      fontSize: 17.0,
-                      fontWeight: FontWeight.w400)),
-            ),
+    return GestureDetector(
+      onTap: () => {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Telas() )// apenas arrumar a rota, essa que coloquei é para DEBUG
+        )
+      },
+      child: Container(
+          height: 160,
+          width: 500,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30.0),
+            image: DecorationImage(
+                fit: BoxFit.fill,
+                image: image),
           ),
-        ]));
+          child: Row(children: [
+            Card(
+              elevation: 0,
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 45),
+                child: Text(text,
+                    style: TextStyle(
+                        color: Colors.black.withOpacity(0.7),
+                        fontFamily: 'Poppins',
+                        fontSize: 17.0,
+                        fontWeight: FontWeight.w400)),
+              ),
+            ),
+          ])),
+    );
   }
 }
