@@ -43,6 +43,20 @@ class _LoginState extends State<Login> {
                       runSpacing: 20,
                       children: [
                         Container(
+                            alignment: Alignment.topCenter,
+                            padding: EdgeInsets.only(bottom: 10),
+                            child: Column(children: [
+                              Text(
+                                "Atomoon",
+                                style: TextStyle(
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 36, 58, 105),
+                                  letterSpacing: -1.2),
+                              ),
+                            ])),
+                        SizedBox(height: 15),
+                        Container(
                             alignment: Alignment.topLeft,
                             padding: const EdgeInsets.only(bottom: 0),
                             child: Column(children: [
@@ -63,13 +77,16 @@ class _LoginState extends State<Login> {
                                     color: Color.fromRGBO(36, 58, 105, 1)),
                                 padding: EdgeInsets.all(5),
                               ),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(5)),
                             ),
                             validator: (String? value) {
                               if (value == null || value.isEmpty) {
                                 setState(() {
                                   shadowColor = Colors.transparent;
                                 });
-                                return 'E-mail Obrigatório';
+                                return 'E-mail obrigatório';
                               }
                               setState(() {
                                 shadowColor = Colors.black;
@@ -90,6 +107,9 @@ class _LoginState extends State<Login> {
                                 ),
                                 padding: EdgeInsets.all(5),
                               ),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(5)),
                               suffixIcon: IconButton(
                                   icon: const Icon(
                                     Icons.remove_red_eye_outlined,
@@ -115,6 +135,18 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         Container(
+                          alignment: Alignment.centerLeft,
+                          child:
+                            TextButton(
+                              onPressed: () {}, 
+                            child: Text(
+                              "Esqueci minha senha",
+                              textAlign: TextAlign.right,
+                              
+                            )
+                            )
+                        ),
+                        Container(
                           margin:
                               (const EdgeInsets.only(top: 15, left: 25, right: 25)),
                           height: 50,
@@ -126,7 +158,7 @@ class _LoginState extends State<Login> {
                           child: TextButton(
                               child: const Center(
                                 child: Text(
-                                  'Criar conta',
+                                  'Entrar',
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ),
