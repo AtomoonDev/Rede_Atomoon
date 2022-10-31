@@ -1,8 +1,7 @@
-import 'package:atomoon/screens/home/bottom_nav.dart';
-import 'package:atomoon/screens/home/pages/chat_page.dart';
-import 'package:atomoon/screens/home/pages/home_page.dart';
-import 'package:atomoon/screens/home/pages/profile_page.dart';
-import 'package:atomoon/screens/home/pages/settings_page.dart';
+import 'package:atomoon/screens/home/pages/chat/chat_page.dart';
+import 'package:atomoon/screens/home/pages/home/home_page.dart';
+import 'package:atomoon/screens/home/pages/profile/profile_page.dart';
+import 'package:atomoon/screens/home/pages/settings/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:atomoon/constants.dart';
 
@@ -14,49 +13,94 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
+  int currentPage = 0;
+  late PageController pc;
 
-  // criar uma lista de tabela
-  static List<Widget> _navPages = <Widget>[
-    const HomePage(),
-    const ChatPage(),
-    const ProfilePage(),
-    const SettingsPage()
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  @override
+  void initState() {
+    super.initState();
+    pc = PageController(initialPage: currentPage);
   }
 
-  AppBar appBar(){
+  @override
+  void dispose() {
+    super.dispose();
+    pc.dispose();
+  }
+
+  AppBar appBar() {
     return AppBar(
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: const Text('Atomoon', style: kNameOfCompanyStyle),
-        leading: IconButton(
+      backgroundColor: Colors.white,
+      centerTitle: true,
+      title: const Text('Atomoon', style: kNameOfCompanyStyle),
+      leading: IconButton(
+        onPressed: () {},
+        icon: const Icon(Icons.more_vert, color: Colors.black),
+      ),
+      actions: [
+        IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.more_vert, color: Colors.black),
+          icon: const Icon(Icons.notification_add_rounded), color: Color.fromARGB(255, 64, 93, 156),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search, color: Colors.black),
-          ),
-        ],
-      );
+      ],
+    );
+  }
+
+  PageView pageView() {
+    List<Widget> navPages = <Widget>[
+      const HomePage(),
+      const ChatPage(),
+      const ProfilePage(),
+      const SettingsPage()
+    ];
+
+    setPaginaAtual(int pagina) {
+      setState(() {
+        currentPage = pagina;
+      });
+    }
+
+    return PageView(
+      controller: pc,
+      onPageChanged: setPaginaAtual,
+      children: navPages,
+    );
+  }
+
+  BottomNavigationBar bottomNav() {
+    return BottomNavigationBar(
+      currentIndex: currentPage,
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: kMainColor,
+      iconSize: 25,
+      selectedFontSize: 14,
+      unselectedFontSize: 12,
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
+        BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Bate-papo'),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
+      ],
+      selectedIconTheme: const IconThemeData(color: kMainColor, size: 20),
+      selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+      showUnselectedLabels: true,
+      backgroundColor: Colors.white,
+      onTap: (int pageIndex) {
+        setState(() {
+          pc.animateToPage(pageIndex,
+              duration: const Duration(milliseconds: 500), curve: Curves.ease);
+        });
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    int _selectedIndex = 0;
-
     return Scaffold(
       backgroundColor: Colorsys.lightGrey,
       appBar: appBar(),
-      body: _navPages.elementAt(_selectedIndex),
-      bottomNavigationBar: BottomNav(currentIndex: _selectedIndex),
+      body: pageView(),
+      bottomNavigationBar: bottomNav(),
     );
   }
 }

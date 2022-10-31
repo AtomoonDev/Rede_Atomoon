@@ -10,6 +10,6 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Chat 100% funcional'));
+    return const Center(child: Text('Chat 100% funcional'));
   }
 }

@@ -10,6 +10,6 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Perfil 100% funcional'));
+    return const Center(child: Text('Perfil 100% funcional'));
   }
 }

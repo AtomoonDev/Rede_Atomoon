@@ -1,12 +1,10 @@
-import 'package:atomoon/screens/Home/bottom_nav.dart';
-import 'package:atomoon/screens/telas.dart';
 import 'package:flutter/material.dart';
 import 'package:atomoon/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'dart:convert';
 
-import '../../../components/category_card.dart';
+import '../../../../components/category_card.dart';
 
 class HomePage extends StatelessWidget {
   static const _padding = 24.0;
@@ -70,36 +68,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  /*
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const SizedBox(height: 52),
-          appBar(),
-          const SizedBox(height: 24),
-          header(),
-          const SizedBox(height: 24),
-          searchBar(),
-          const SizedBox(height: 36),
-          categories(),
-          const SizedBox(height: 16),
-          const AllDestinations(
-            padding: _padding,
-            spacing: _spacing,
-          ),
-          const SizedBox(height: 36),
-          const TopDestinations(
-            padding: _padding,
-            spacing: _spacing,
-          ),
-        ],
-      ),
-    );
-  }*/
-
   Widget categoriesTab(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
@@ -124,7 +92,7 @@ class HomePage extends StatelessWidget {
                 unselectedLabelStyle: GoogleFonts.openSans(
                     fontSize: 15, fontWeight: FontWeight.w600),
                 tabs: [
-                  Container(
+                  SizedBox(
                     height: 35.0,
                     child: const Tab(
                       child: Text(
@@ -136,7 +104,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     height: 35.0,
                     child: const Tab(
                       child: Text(
@@ -152,6 +120,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget cards() {
+    /*
     List data;
     String rawJson =
         '[{"text":"Jardineiro","image": "lib/assets/images/card_img1.png"},' +
@@ -170,7 +139,7 @@ class HomePage extends StatelessWidget {
       itemBuilder: (context, index) {
         return Text(index.toString());
       },
-    );
+    );*/
 
     return Column(children: const [
       CategoryCard(

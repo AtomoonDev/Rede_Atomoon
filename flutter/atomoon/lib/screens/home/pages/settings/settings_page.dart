@@ -10,6 +10,6 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Configurações 100% funcional'));
+    return const Center(child: Text('Configurações 100% funcional'));
   }
 }
