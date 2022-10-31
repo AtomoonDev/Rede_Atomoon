@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Test extends StatefulWidget {
+  const Test({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -28,21 +30,21 @@ class _MyHomePageState extends State<Test>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Demo"),
+        title: const Text("Demo"),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
             RotationTransition(
               turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
-              child: Icon(Icons.stars),
+              child: const Icon(Icons.stars),
             ),
             ElevatedButton(
-              child: Text("go"),
+              child: const Text("go"),
               onPressed: () => _controller.forward(),
             ),
             ElevatedButton(
-              child: Text("reset"),
+              child: const Text("reset"),
               onPressed: () => _controller.reset(),
             ),
           ],

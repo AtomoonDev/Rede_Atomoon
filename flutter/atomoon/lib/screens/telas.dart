@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:atomoon/screens/screens.dart';
 import 'package:atomoon/components/buttons.dart';
-import 'package:atomoon/screens/home/pages/home_page.dart';
 
 const bgColor = Color(0xFFF5F5F5);
 const primaryColor = Color(0xFF00AFFF);
@@ -94,7 +93,7 @@ class Telas extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Test()),
+                        MaterialPageRoute(builder: (context) => const Test()),
                       );
                     },
                     isOutlinedBtn: true,

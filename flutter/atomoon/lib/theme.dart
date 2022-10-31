@@ -11,24 +11,24 @@ ThemeData lightThemeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: kContentColorLightTheme),
+    iconTheme: const IconThemeData(color: kContentColorLightTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
         .apply(bodyColor: kContentColorLightTheme),
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
       selectedItemColor: kContentColorLightTheme.withOpacity(0.7),
       unselectedItemColor: kContentColorLightTheme.withOpacity(0.32),
-      selectedIconTheme: IconThemeData(color: kPrimaryColor),
+      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
     inputDecorationTheme: InputDecorationTheme(
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black),
+          borderSide: const BorderSide(color: Colors.black),
           borderRadius: BorderRadius.circular(5)
         )
       ),
@@ -42,31 +42,31 @@ ThemeData darkThemeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: kContentColorLightTheme,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: kContentColorDarkTheme),
+    iconTheme: const IconThemeData(color: kContentColorDarkTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
         .apply(bodyColor: kContentColorDarkTheme),
-    colorScheme: ColorScheme.dark().copyWith(
+    colorScheme: const ColorScheme.dark().copyWith(
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: kContentColorLightTheme,
-      selectedItemColor: Color(0xB3FFFFFF),
+      selectedItemColor: const Color(0xB3FFFFFF),
       unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
-      selectedIconTheme: IconThemeData(color: kPrimaryColor),
+      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
       inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: const BorderSide(color: Colors.black),
         borderRadius: BorderRadius.circular(5)
       )
     ),
   );
 }
 
-final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
+const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
 
 
 /*

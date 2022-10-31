@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
           actions: [
             IconButton(
               color: Colors.black,
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -36,7 +36,7 @@ class _LoginState extends State<Login> {
             child: Form(
                 key: formKey,
                 child: Container(
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
                     child: Wrap(
                       alignment: WrapAlignment.center,
                       spacing: 20,
@@ -44,11 +44,11 @@ class _LoginState extends State<Login> {
                       children: [
                         Container(
                             alignment: Alignment.topLeft,
-                            padding: EdgeInsets.only(bottom: 0),
+                            padding: const EdgeInsets.only(bottom: 0),
                             child: Column(children: [
-                              Text(
+                              const Text(
                                 "Entrar",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 35),
                               ),
                             ])),
@@ -56,7 +56,7 @@ class _LoginState extends State<Login> {
                           elevation: 8,
                           shadowColor: shadowColor,
                           child: TextFormField(
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               labelText: 'E-mail',
                               prefixIcon: Padding(
                                 child: Icon(Icons.email_rounded,
@@ -83,7 +83,7 @@ class _LoginState extends State<Login> {
                           child: TextFormField(
                             decoration: InputDecoration(
                               labelText: 'Senha',
-                              prefixIcon: Padding(
+                              prefixIcon: const Padding(
                                 child: Icon(
                                   Icons.key,
                                   color: Color.fromRGBO(36, 58, 105, 1),
@@ -91,7 +91,7 @@ class _LoginState extends State<Login> {
                                 padding: EdgeInsets.all(5),
                               ),
                               suffixIcon: IconButton(
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.remove_red_eye_outlined,
                                     color: Color.fromRGBO(36, 58, 105, 1),
                                   ),
@@ -116,15 +116,15 @@ class _LoginState extends State<Login> {
                         ),
                         Container(
                           margin:
-                              (EdgeInsets.only(top: 15, left: 25, right: 25)),
+                              (const EdgeInsets.only(top: 15, left: 25, right: 25)),
                           height: 50,
                           width: 200,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Color.fromRGBO(36, 58, 105, 1),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(32))),
                           child: TextButton(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   'Criar conta',
                                   style: TextStyle(color: Colors.white),
@@ -135,7 +135,7 @@ class _LoginState extends State<Login> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => HomeScreen()));
+                                          builder: (context) => const HomeScreen()));
                                 }
                               }),
                         ),

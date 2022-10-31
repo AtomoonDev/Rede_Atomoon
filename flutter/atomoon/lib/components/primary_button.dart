@@ -19,10 +19,10 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(40),
         ),
-        
+
       ),
       padding: padding,
       color: color,
@@ -30,7 +30,7 @@ class PrimaryButton extends StatelessWidget {
       onPressed: press,
       child: Text(
         text,
-        style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+        style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
       ),
     );
   }
@@ -53,7 +53,7 @@ class SecondButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(40),),
         side: BorderSide(color: Color.fromRGBO(36, 58, 105, 1),)
       ),
@@ -63,7 +63,7 @@ class SecondButton extends StatelessWidget {
       onPressed: press,
       child: Text(
         text,
-        style: TextStyle(color: Color.fromRGBO(36, 58, 105, 1)),
+        style: const TextStyle(color: Color.fromRGBO(36, 58, 105, 1)),
       ),
     );
   }

@@ -27,7 +27,7 @@ class CategoryCard extends StatelessWidget {
             elevation: 0,
             color: Colors.transparent,
             child: Padding(
-              padding: EdgeInsets.only(left: 45),
+              padding: const EdgeInsets.only(left: 45),
               child: Text(text,
                   style: TextStyle(
                       color: Colors.black.withOpacity(0.7),

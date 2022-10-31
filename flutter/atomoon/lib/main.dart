@@ -1,8 +1,6 @@
 import 'package:atomoon/screens/welcome/welcome_screen.dart';
 import 'package:atomoon/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:atomoon/screens/screens.dart';
-import 'package:atomoon/constants.dart';
 
 void main() {
   runApp(const MyApp());

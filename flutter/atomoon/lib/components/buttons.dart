@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class RoundedDFBtn extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
-  bool isOutlinedBtn;
+  final bool isOutlinedBtn;
 
   RoundedDFBtn({
     Key? key,
@@ -17,22 +17,18 @@ class RoundedDFBtn extends StatelessWidget {
     return isOutlinedBtn
         ? OutlinedButton(
             style: OutlinedButton.styleFrom(
-              primary: Colors.white,
-              side: BorderSide(color: Theme.of(context).primaryColor),
+              foregroundColor: Colors.white, side: BorderSide(color: Theme.of(context).primaryColor), disabledForegroundColor: Colors.white.withOpacity(0.38),
               backgroundColor: Colors.transparent,
-              onSurface: Colors.white,
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30))),
             ),
             onPressed: onPressed,
             child: Text(text),
           )
-        : 
+        :
         TextButton(
             style: TextButton.styleFrom(
-              primary: Colors.white,
-              backgroundColor: Theme.of(context).primaryColor,
-              onSurface: Colors.white,
+              foregroundColor: Colors.white, backgroundColor: Theme.of(context).primaryColor, disabledForegroundColor: Colors.white.withOpacity(0.38),
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30))),
             ),

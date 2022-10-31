@@ -25,14 +25,14 @@ class RegisterState extends State<Register> {
 
   Widget _BuildNameField() {
     return TextFormField(
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: 'Nome',
         prefixIcon: Padding(
+          padding: EdgeInsets.all(5),
           child: Icon(
             Icons.account_circle_outlined,
             color: Color.fromRGBO(36, 58, 105, 1),
           ),
-          padding: EdgeInsets.all(5),
         ),
       ),
       validator: (String? value) {
@@ -51,12 +51,12 @@ class RegisterState extends State<Register> {
 
   Widget _BuildEmailField() {
     return TextFormField(
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: 'E-mail',
         prefixIcon: Padding(
+          padding: EdgeInsets.all(5),
           child:
               Icon(Icons.email_rounded, color: Color.fromRGBO(36, 58, 105, 1)),
-          padding: EdgeInsets.all(5),
         ),
       ),
       validator: (String? value) {
@@ -77,18 +77,18 @@ class RegisterState extends State<Register> {
     return TextFormField(
       decoration: InputDecoration(
         labelText: 'Senha',
-        prefixIcon: Padding(
+        prefixIcon: const Padding(
+          padding: EdgeInsets.all(5),
           child: Icon(
             Icons.key,
             color: Color.fromRGBO(36, 58, 105, 1),
           ),
-          padding: EdgeInsets.all(5),
         ),
         border: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.black),
+            borderSide: const BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(5)),
         suffixIcon: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.remove_red_eye_outlined,
               color: Color.fromRGBO(36, 58, 105, 1),
             ),
@@ -121,7 +121,7 @@ class RegisterState extends State<Register> {
           actions: [
             IconButton(
               color: Colors.black,
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -133,7 +133,7 @@ class RegisterState extends State<Register> {
             child: Form(
                 key: formKey,
                 child: Container(
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
                     child: Wrap(
                       alignment: WrapAlignment.center,
                       spacing: 0,
@@ -141,8 +141,8 @@ class RegisterState extends State<Register> {
                       children: [
                         Container(
                             alignment: Alignment.topCenter,
-                            padding: EdgeInsets.only(bottom: 10),
-                            child: Column(children: [
+                            padding: const EdgeInsets.only(bottom: 10),
+                            child: Column(children: const [
                               Text(
                                 "Atomoon",
                                 style: TextStyle(
@@ -152,14 +152,14 @@ class RegisterState extends State<Register> {
                                   letterSpacing: -1.2),
                               ),
                             ])),
-                        SizedBox(height: 90),
+                        const SizedBox(height: 90),
                        Container(
                             alignment: Alignment.topLeft,
-                            padding: EdgeInsets.only(bottom: 0),
-                            child: Column(children: [
+                            padding: const EdgeInsets.only(bottom: 0),
+                            child: Column(children: const [
                               Text(
                                 "Criar conta",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 20),
                               ),
                         ])),
@@ -171,18 +171,18 @@ class RegisterState extends State<Register> {
                           child: TextFormField(
                             decoration: InputDecoration(
                               labelText: 'Senha',
-                              prefixIcon: Padding(
+                              prefixIcon: const Padding(
+                                padding: EdgeInsets.all(5),
                                 child: Icon(
                                   Icons.key,
                                   color: Color.fromRGBO(36, 58, 105, 1),
                                 ),
-                                padding: EdgeInsets.all(5),
                               ),
                               border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
+                                  borderSide: const BorderSide(color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               suffixIcon: IconButton(
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.remove_red_eye_outlined,
                                     color: Color.fromRGBO(36, 58, 105, 1),
                                   ),
@@ -211,18 +211,18 @@ class RegisterState extends State<Register> {
                           child: TextFormField(
                             decoration: InputDecoration(
                               labelText: 'Confirme sua senha',
-                              prefixIcon: Padding(
+                              prefixIcon: const Padding(
+                                padding: EdgeInsets.all(5),
                                 child: Icon(
                                   Icons.key,
                                   color: Color.fromRGBO(36, 58, 105, 1),
                                 ),
-                                padding: EdgeInsets.all(5),
                               ),
                               border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
+                                  borderSide: const BorderSide(color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               suffixIcon: IconButton(
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.remove_red_eye_outlined,
                                     color: Color.fromRGBO(36, 58, 105, 1),
                                   ),
@@ -243,15 +243,15 @@ class RegisterState extends State<Register> {
                         ),
                         Container(
                           margin:
-                              (EdgeInsets.only(top: 15, left: 25, right: 25)),
+                              (const EdgeInsets.only(top: 15, left: 25, right: 25)),
                           height: 50,
                           width: 200,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Color.fromRGBO(36, 58, 105, 1),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(32))),
                           child: TextButton(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   'Criar conta',
                                   style: TextStyle(color: Colors.white),
@@ -262,7 +262,7 @@ class RegisterState extends State<Register> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => HomeScreen()));
+                                          builder: (context) => const HomeScreen()));
                                   setState(() {
                                     shadowColor = Colors.black;
                                   });

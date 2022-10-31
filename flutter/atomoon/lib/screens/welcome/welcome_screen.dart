@@ -8,7 +8,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container( 
+        child: Container(
           alignment: Alignment.center,/*
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -18,19 +18,19 @@ class WelcomeScreen extends StatelessWidget {
                 ,*/
           child: Column(
           children: [
-            Spacer(flex: 2),
+            const Spacer(flex: 2),
             Image.asset("lib/assets/images/lua_semborda1.png"),
-            Spacer(flex: 3),
+            const Spacer(flex: 3),
             Text(
               "Aplicativo Atomoon",
-              // 
+              //
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
                   .headline5!
                   .copyWith(fontWeight: FontWeight.bold),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               "O App para buscar trabalhos em sua área.",
               textAlign: TextAlign.center,
@@ -42,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                     .withOpacity(0.64),
               ),
             ),
-            Spacer(flex: 3),
+            const Spacer(flex: 3),
             FittedBox(
               child: TextButton(
                   onPressed: () => Navigator.push(
@@ -63,7 +63,7 @@ class WelcomeScreen extends StatelessWidget {
                                   .withOpacity(0.8),
                             ),
                       ),
-                      SizedBox(width: kDefaultPadding / 4),
+                      const SizedBox(width: kDefaultPadding / 4),
                       Icon(
                         Icons.arrow_forward_ios,
                         size: 16,
