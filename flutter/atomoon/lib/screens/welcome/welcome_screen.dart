@@ -1,7 +1,7 @@
 import 'package:atomoon/screens/signIn_or_signUp/signin_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:atomoon/constants.dart';
+import 'package:atomoon/config/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override

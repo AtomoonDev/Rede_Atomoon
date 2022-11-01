@@ -3,7 +3,7 @@ import 'package:atomoon/screens/home/pages/home/home_page.dart';
 import 'package:atomoon/screens/home/pages/profile/profile_page.dart';
 import 'package:atomoon/screens/home/pages/settings/settings_page.dart';
 import 'package:flutter/material.dart';
-import 'package:atomoon/constants.dart';
+import 'package:atomoon/config/constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

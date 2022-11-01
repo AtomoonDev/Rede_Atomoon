@@ -1,7 +1,7 @@
 import 'package:atomoon/components/primary_button.dart';
 import 'package:atomoon/screens/signIn_or_signUp/register_screen.dart';
 import 'package:atomoon/screens/signIn_or_signUp/login_screen.dart';
-import 'package:atomoon/constants.dart';
+import 'package:atomoon/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
@@ -46,7 +46,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                 press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Login(),
+                    builder: (context) => const LoginPage(),
                   ),
                 ),
               ),
