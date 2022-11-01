@@ -1,7 +1,7 @@
 import 'package:atomoon/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import '../../config/constants.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
