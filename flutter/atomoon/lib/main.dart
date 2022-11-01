@@ -1,15 +1,15 @@
+import 'package:atomoon/screens/splash/splash_page.dart';
 import 'package:atomoon/screens/welcome/welcome_screen.dart';
-import 'package:atomoon/theme.dart';
+import 'package:atomoon/config/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const AtomoonApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class AtomoonApp extends StatelessWidget {
+  const AtomoonApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,7 +17,12 @@ class MyApp extends StatelessWidget {
       title: 'Atomoon',
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      home: WelcomeScreen(),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => SplashPage(),
+      },
+      //home: WelcomeScreen(),
     );
   }
 }
