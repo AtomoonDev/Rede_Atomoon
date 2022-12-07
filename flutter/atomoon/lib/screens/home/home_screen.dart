@@ -6,19 +6,23 @@ import 'package:flutter/material.dart';
 import 'package:atomoon/config/constants.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final int? dfCurrentPage;
+  const HomeScreen({this.dfCurrentPage, super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  static const routeName = '/home';
+
   int currentPage = 0;
   late PageController pc;
 
   @override
   void initState() {
     super.initState();
+    currentPage = widget.dfCurrentPage ?? currentPage;
     pc = PageController(initialPage: currentPage);
   }
 
@@ -51,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
       const HomePage(),
       const ChatPage(),
       const ProfilePage(),
-      const SettingsPage()
+      SettingsPage()
     ];
 
     setPaginaAtual(int pagina) {
