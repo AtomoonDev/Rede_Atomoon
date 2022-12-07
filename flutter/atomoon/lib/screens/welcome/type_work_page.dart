@@ -62,7 +62,8 @@ class TypeOfWorkPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Telas()),
+                        MaterialPageRoute(
+                            builder: (context) => const TelasTest()),
                       );
                     },
                   ),
@@ -75,7 +76,8 @@ class TypeOfWorkPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Telas()),
+                        MaterialPageRoute(
+                            builder: (context) => const TelasTest()),
                       );
                     },
                     isOutlinedBtn: true,

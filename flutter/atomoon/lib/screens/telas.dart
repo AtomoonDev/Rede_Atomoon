@@ -11,8 +11,8 @@ const styleNameOfCompany = TextStyle(
     color: Colors.black,
     letterSpacing: -1.2);
 
-class Telas extends StatelessWidget {
-  const Telas({Key? key}) : super(key: key);
+class TelasTest extends StatelessWidget {
+  const TelasTest({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -85,20 +85,6 @@ class Telas extends StatelessWidget {
                     isOutlinedBtn: true,
                   ),
                 ),
-                SizedBox(
-                  width: 250.0,
-                  height: 40.0,
-                  child: RoundedDFBtn(
-                    text: 'Test',
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Test()),
-                      );
-                    },
-                    isOutlinedBtn: true,
-                  ),
-                )
               ],
             ),
           ],
