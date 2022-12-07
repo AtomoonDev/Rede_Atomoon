@@ -1,0 +1,6 @@
+{
+    "authenticated" : true,
+    "expiration" : "dd/mm/yyyy hh:mm",
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5c......",
+    "message" : "OK"
+}
