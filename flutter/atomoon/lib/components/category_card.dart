@@ -6,30 +6,31 @@ class CategoryCard extends StatelessWidget {
   final String text;
   final AssetImage image;
 
-  const CategoryCard({Key? key, required this.text, required this.image}) : super(key: key);
+  const CategoryCard({Key? key, required this.text, required this.image})
+      : super(key: key);
 
-  factory  CategoryCard.fromJson(dynamic json) {
-    return CategoryCard(text: json['text'] as String, image: AssetImage(json['image']));
+  factory CategoryCard.fromJson(dynamic json) {
+    return CategoryCard(
+        text: json['text'] as String, image: AssetImage(json['image']));
   }
-
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => {
         Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Telas() )// apenas arrumar a rota, essa que coloquei é para DEBUG
-        )
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    TelasTest()) // apenas arrumar a rota, essa que coloquei é para DEBUG
+            )
       },
       child: Container(
           height: 160,
           width: 500,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30.0),
-            image: DecorationImage(
-                fit: BoxFit.fill,
-                image: image),
+            image: DecorationImage(fit: BoxFit.fill, image: image),
           ),
           child: Row(children: [
             Card(

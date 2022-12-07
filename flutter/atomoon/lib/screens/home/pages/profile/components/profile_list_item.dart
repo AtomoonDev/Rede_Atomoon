@@ -19,17 +19,17 @@ class ProfileListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: kSpacingUnit * 5.5,
-      margin: EdgeInsets.symmetric(
+      margin: const EdgeInsets.symmetric(
         horizontal: kSpacingUnit * 4,
       ).copyWith(
         bottom: kSpacingUnit * 2,
       ),
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: kSpacingUnit * 2,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(kSpacingUnit * 3),
-        color: Color.fromARGB(255, 36, 58, 105),
+        color: const Color.fromARGB(255, 36, 58, 105),
       ),
       child: Row(
         children: <Widget>[
@@ -38,15 +38,14 @@ class ProfileListItem extends StatelessWidget {
             size: kSpacingUnit * 2.5,
             color: Colors.white,
           ),
-          SizedBox(width: kSpacingUnit * 1.5),
+          const SizedBox(width: kSpacingUnit * 1.5),
           Text(
             this.text,
-            style: TextStyle(color: Colors.white),
-
+            style: const TextStyle(color: Colors.white),
           ),
-          Spacer(),
+          const Spacer(),
           if (this.hasNavigation)
-            Icon(
+            const Icon(
               LineAwesomeIcons.arrow_right,
               size: kSpacingUnit * 2.5,
               color: Colors.white,

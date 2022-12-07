@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 import '../../config/constants.dart';
 
-class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  State<Register> createState() => RegisterState();
+  State<RegisterScreen> createState() => RegisterScreenState();
 }
 
-class RegisterState extends State<Register> {
+class RegisterScreenState extends State<RegisterScreen> {
   String? _password = " ";
   bool esconderTexto = true;
   bool esconderTexto2 = true;
@@ -146,14 +146,14 @@ class RegisterState extends State<Register> {
                               Text(
                                 "Atomoon",
                                 style: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 36, 58, 105),
-                                  letterSpacing: -1.2),
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 36, 58, 105),
+                                    letterSpacing: -1.2),
                               ),
                             ])),
                         const SizedBox(height: 90),
-                       Container(
+                        Container(
                             alignment: Alignment.topLeft,
                             padding: const EdgeInsets.only(bottom: 0),
                             child: Column(children: const [
@@ -162,7 +162,7 @@ class RegisterState extends State<Register> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 20),
                               ),
-                        ])),
+                            ])),
                         ComponentWithShadow(_BuildNameField()),
                         ComponentWithShadow(_BuildEmailField()),
                         Material(
@@ -179,7 +179,8 @@ class RegisterState extends State<Register> {
                                 ),
                               ),
                               border: OutlineInputBorder(
-                                  borderSide: const BorderSide(color: Colors.black),
+                                  borderSide:
+                                      const BorderSide(color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               suffixIcon: IconButton(
                                   icon: const Icon(
@@ -219,7 +220,8 @@ class RegisterState extends State<Register> {
                                 ),
                               ),
                               border: OutlineInputBorder(
-                                  borderSide: const BorderSide(color: Colors.black),
+                                  borderSide:
+                                      const BorderSide(color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               suffixIcon: IconButton(
                                   icon: const Icon(
@@ -242,8 +244,8 @@ class RegisterState extends State<Register> {
                           ),
                         ),
                         Container(
-                          margin:
-                              (const EdgeInsets.only(top: 15, left: 25, right: 25)),
+                          margin: (const EdgeInsets.only(
+                              top: 15, left: 25, right: 25)),
                           height: 50,
                           width: 200,
                           decoration: const BoxDecoration(
@@ -259,13 +261,11 @@ class RegisterState extends State<Register> {
                               ),
                               onPressed: () {
                                 if (formKey.currentState?.validate() ?? false) {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const HomeScreen()));
                                   setState(() {
                                     shadowColor = Colors.black;
                                   });
+                                  Navigator.of(context).pushNamedAndRemoveUntil(
+                                      '/home', (Route<dynamic> route) => false);
                                 }
                                 setState(() {
                                   shadowColor = Colors.transparent;

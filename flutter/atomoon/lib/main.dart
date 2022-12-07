@@ -1,10 +1,15 @@
-import 'package:atomoon/screens/splash/splash_screen.dart';
-import 'package:atomoon/screens/welcome/welcome_screen.dart';
-import 'package:atomoon/config/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:atomoon/config/routes.dart';
+import 'package:atomoon/config/theme.dart';
+
+// import 'package:firebase_core/firebase_core.dart';
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
+
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
@@ -20,16 +25,11 @@ class AtomoonApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Atomoon',
-      theme: lightThemeData(context),
-      darkTheme: darkThemeData(context),
-      initialRoute: '/',
-      routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => SplashScreen(),
-      },
-      //home: WelcomeScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Atomoon',
+        theme: lightThemeData(context),
+        darkTheme: darkThemeData(context),
+        initialRoute: '/',
+        routes: routes);
   }
 }

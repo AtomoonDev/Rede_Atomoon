@@ -1,19 +1,32 @@
-import 'package:atomoon/screens/home/home_screen.dart';
+//import 'package:atomoon/api/http_api.dart';
+//import 'package:atomoon/models/api_response.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginScreenState extends State<LoginScreen> {
+  final loginController = TextEditingController();
+  final senhaController = TextEditingController();
+
+
   String? _password = " ";
   bool esconderTexto = true;
   bool esconderTexto2 = true;
   var formKey = GlobalKey<FormState>();
   Color shadowColor = Colors.black;
+
+  Future<void> readJson() async {
+    final String response = await rootBundle.loadString('assets/sample.json');
+    final data = await json.decode(response);
+// ...
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,23 +57,23 @@ class _LoginPageState extends State<LoginPage> {
                       children: [
                         Container(
                             alignment: Alignment.topCenter,
-                            padding: EdgeInsets.only(bottom: 10),
-                            child: Column(children: [
+                            padding: const EdgeInsets.only(bottom: 10),
+                            child: Column(children: const [
                               Text(
                                 "Atomoon",
                                 style: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 36, 58, 105),
-                                  letterSpacing: -1.2),
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 36, 58, 105),
+                                    letterSpacing: -1.2),
                               ),
                             ])),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
                         Container(
                             alignment: Alignment.topLeft,
                             padding: const EdgeInsets.only(bottom: 0),
-                            child: Column(children: [
-                              const Text(
+                            child: Column(children: const [
+                              Text(
                                 "Entrar",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 35),
@@ -72,13 +85,14 @@ class _LoginPageState extends State<LoginPage> {
                           child: TextFormField(
                             decoration: InputDecoration(
                               labelText: 'E-mail',
-                              prefixIcon: Padding(
+                              prefixIcon: const Padding(
+                                padding: EdgeInsets.all(5),
                                 child: Icon(Icons.email_rounded,
                                     color: Color.fromRGBO(36, 58, 105, 1)),
-                                padding: EdgeInsets.all(5),
                               ),
                               border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
+                                  borderSide:
+                                      const BorderSide(color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                             ),
                             validator: (String? value) {
@@ -91,6 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                               setState(() {
                                 shadowColor = Colors.black;
                               });
+                              return null;
                             },
                           ),
                         ),
@@ -101,14 +116,15 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: InputDecoration(
                               labelText: 'Senha',
                               prefixIcon: const Padding(
+                                padding: EdgeInsets.all(5),
                                 child: Icon(
                                   Icons.key,
                                   color: Color.fromRGBO(36, 58, 105, 1),
                                 ),
-                                padding: EdgeInsets.all(5),
                               ),
                               border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
+                                  borderSide:
+                                      const BorderSide(color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               suffixIcon: IconButton(
                                   icon: const Icon(
@@ -129,26 +145,23 @@ class _LoginPageState extends State<LoginPage> {
                               setState(() {
                                 shadowColor = Colors.black;
                               });
+                              return null;
                             },
                             onSaved: (val) => _password = val,
                             obscureText: esconderTexto,
                           ),
                         ),
                         Container(
-                          alignment: Alignment.centerLeft,
-                          child:
-                            TextButton(
-                              onPressed: () {},
-                            child: Text(
-                              "Esqueci minha senha",
-                              textAlign: TextAlign.right,
-
-                            )
-                            )
-                        ),
+                            alignment: Alignment.centerLeft,
+                            child: TextButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  "Esqueci minha senha",
+                                  textAlign: TextAlign.right,
+                                ))),
                         Container(
-                          margin:
-                              (const EdgeInsets.only(top: 15, left: 25, right: 25)),
+                          margin: (const EdgeInsets.only(
+                              top: 15, left: 25, right: 25)),
                           height: 50,
                           width: 200,
                           decoration: const BoxDecoration(
@@ -164,10 +177,19 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               onPressed: () {
                                 if (formKey.currentState?.validate() ?? false) {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const HomeScreen()));
+                                  // API Login
+                                  /*final login = loginController.text;
+                                  final senha = senhaController.text;
+                                  
+                                  print("Login: $login , Senha: $senha " );  
+                                  ApiResponse response = LoginApi.login(login, senha).then((value) => value); 
+                                  if(!response.statusOk){
+                                    print("Erro ao logar: ${response.msg}");
+                                    return ;
+                                  }*/
+
+                                  Navigator.of(context).pushNamedAndRemoveUntil(
+                                      '/home', (Route<dynamic> route) => false);
                                 }
                               }),
                         ),

@@ -46,7 +46,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                 press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const LoginPage(),
+                    builder: (context) => const LoginScreen(),
                   ),
                 ),
               ),
@@ -57,7 +57,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                 press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Register(),
+                    builder: (context) => const RegisterScreen(),
                   ),
                 ),
               ),
