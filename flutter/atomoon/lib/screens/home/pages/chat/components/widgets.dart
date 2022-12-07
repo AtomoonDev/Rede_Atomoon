@@ -1,3 +1,4 @@
+import 'package:atomoon/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:atomoon/screens/home/pages/chat/components/styles.dart';
@@ -125,7 +126,7 @@ class ChatWidgets {
     );
   }
 
-  static drawer() {
+  static drawer(context) {
     return Drawer(
       backgroundColor: Color.fromARGB(255, 36, 58, 105),
       child: SafeArea(
@@ -134,7 +135,7 @@ class ChatWidgets {
           child: Theme(
             data: ThemeData.dark(),
             child: Column(
-              children: const [
+              children: [
                 CircleAvatar(
                   child: Icon(
                     Icons.person,
@@ -151,10 +152,22 @@ class ChatWidgets {
                 ListTile(
                   leading: Icon(Icons.person),
                   title: Text('Perfil'),
+                  onTap: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const HomeScreen(dfCurrentPage: 2)),
+                        (route) => false);
+                  }, 
                 ),
                 ListTile(
                   leading: Icon(Icons.logout),
-                  title: Text('Logout'),
+                  title: Text('Sair da conta'),
+                  onTap: () {
+                                        Navigator.of(context).pushNamedAndRemoveUntil(
+                        '/auth', (Route<dynamic> route) => false);
+                  },
                 )
               ],
             ),

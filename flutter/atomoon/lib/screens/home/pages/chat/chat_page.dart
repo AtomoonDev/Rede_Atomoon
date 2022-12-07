@@ -37,7 +37,7 @@ class _ChatPageState extends State<ChatPage> {
           )
         ],
       ),
-      drawer: ChatWidgets.drawer(),
+      drawer: ChatWidgets.drawer(context),
       body: SafeArea(
         child: Stack(
           alignment: AlignmentDirectional.topEnd,
