@@ -143,13 +143,13 @@ class HomePage extends StatelessWidget {
 
     return Column(children: const [
       CategoryCard(
-          text: 'Jardineiro',
+          text: 'Jardineiro(a)',
           image: AssetImage("lib/assets/images/card_img1.png")),
       CategoryCard(
-          text: 'Jardineiro',
+          text: 'Faxineiro(a)',
           image: AssetImage("lib/assets/images/card_img1.png")),
       CategoryCard(
-          text: 'Jardineiro',
+          text: 'Encanador(a)',
           image: AssetImage("lib/assets/images/card_img1.png")),
     ]);
   }
@@ -208,7 +208,6 @@ class HomePage extends StatelessWidget {
                   cardWhatYouWant(context),
                   const SizedBox(height: 10),
                   cards(
-                    
                   ),
                   const SizedBox(height: 10),
                 ],
