@@ -147,10 +147,10 @@ class HomePage extends StatelessWidget {
           image: AssetImage("lib/assets/images/card_img1.png")),
       CategoryCard(
           text: 'Faxineiro(a)',
-          image: AssetImage("lib/assets/images/card_img1.png")),
+          image: AssetImage("lib/assets/images/card_img2.png")),
       CategoryCard(
           text: 'Encanador(a)',
-          image: AssetImage("lib/assets/images/card_img1.png")),
+          image: AssetImage("lib/assets/images/card_img3.png")),
     ]);
   }
 
