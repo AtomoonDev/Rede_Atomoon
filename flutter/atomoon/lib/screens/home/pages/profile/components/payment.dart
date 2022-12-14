@@ -1,23 +1,21 @@
-import 'dart:io';
-
-import 'package:atomoon/config/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/cupertino.dart';
+
+
 
 class Payment extends StatefulWidget {
-  Payment({Key? key, this.title}) : super(key: key);
+  const Payment({Key? key, this.title}) : super(key: key);
   final String? title;
 
   @override
-  _PaymentState createState() => _PaymentState();
+  State<Payment> createState() => _PaymentState();
 }
 
 class _PaymentState extends State<Payment> {
-  var _scaffoldKey = GlobalKey<ScaffoldState>();
-  var _formKey = GlobalKey<FormState>();
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
+  final _formKey = GlobalKey<FormState>();
   var numberController = TextEditingController();
-  var _autoValidateMode = AutovalidateMode.disabled;
+  final _autoValidateMode = AutovalidateMode.disabled;
 
   @override
   void initState() {
@@ -46,14 +44,13 @@ class _PaymentState extends State<Payment> {
                     width: 120,
                     decoration: BoxDecoration(
                       image: const DecorationImage(
-                        image: NetworkImage(
-                            'https://images.unsplash.com/photo-1613243555988-441166d4d6fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'),
+                        image: AssetImage('lib/assets/images/credit_card.png'),
                         fit: BoxFit.cover,
                       ),
                       border: Border.all(
                         //<-- SEE HERE
                         width: 5,
-                        color: Color.fromARGB(255, 28, 67, 177),
+                        color: const Color.fromARGB(255, 28, 67, 177),
                       ),
                       borderRadius: BorderRadiusDirectional.circular(20),
                       boxShadow: [
@@ -79,7 +76,8 @@ class _PaymentState extends State<Payment> {
                               foreground: Paint()
                                 ..style = PaintingStyle.stroke
                                 ..strokeWidth = 6
-                                ..color = Color.fromARGB(255, 168, 153, 15),
+                                ..color =
+                                    const Color.fromARGB(255, 168, 153, 15),
                             ),
                           ),
                           // Solid text as fill.
@@ -119,7 +117,7 @@ class _PaymentState extends State<Payment> {
                   ),
                   TextFormField(
                     keyboardType: TextInputType.number,
-                    inputFormatters: [],
+                    inputFormatters: const [],
                     controller: numberController,
                     decoration: const InputDecoration(
                       icon: Icon(

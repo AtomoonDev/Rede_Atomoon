@@ -1,10 +1,5 @@
-import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:atomoon/config/constants.dart';
 import 'package:atomoon/screens/home/home_screen.dart';
-import 'package:atomoon/screens/home/pages/home/home_page.dart';
-import 'package:atomoon/screens/home/pages/settings/settings_page.dart';
-import 'package:atomoon/screens/signIn_or_signUp/login_screen.dart';
-import 'package:atomoon/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
@@ -33,11 +28,11 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Stack(
               children: const <Widget>[
                 CircleAvatar(
-                    radius: kSpacingUnit * 6,
-                    backgroundImage:
-                        // AssetImage('lib/assets/images/lua_semborda1.png'),
-                        NetworkImage(
-                            'https://images.unsplash.com/photo-1528953030358-b0c7de371f1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=651&q=80')),
+                  radius: kSpacingUnit * 6,
+                  backgroundImage:
+                      AssetImage('lib/assets/images/profile_icon.png'),
+                  
+                ),
               ],
             ),
           ),
@@ -85,7 +80,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Payment(),
+                        builder: (context) => const Payment(),
                       ),
                     );
                   },

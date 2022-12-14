@@ -1,7 +1,4 @@
-import 'package:atomoon/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../../config/constants.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -11,6 +8,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class RegisterScreenState extends State<RegisterScreen> {
+  // ignore: unused_field
   String? _password = " ";
   bool esconderTexto = true;
   bool esconderTexto2 = true;
@@ -19,11 +17,11 @@ class RegisterScreenState extends State<RegisterScreen> {
   bool senha1 = true;
   bool senha2 = true;
 
-  Widget ComponentWithShadow(Widget component) {
+  Widget componentWithShadow(Widget component) {
     return Material(elevation: 8, shadowColor: shadowColor, child: component);
   }
 
-  Widget _BuildNameField() {
+  Widget _buildNameField() {
     return TextFormField(
       decoration: const InputDecoration(
         labelText: 'Nome',
@@ -45,11 +43,12 @@ class RegisterScreenState extends State<RegisterScreen> {
         setState(() {
           shadowColor = Colors.black;
         });
+        return null;
       },
     );
   }
 
-  Widget _BuildEmailField() {
+  Widget _buildEmailField() {
     return TextFormField(
       decoration: const InputDecoration(
         labelText: 'E-mail',
@@ -69,11 +68,13 @@ class RegisterScreenState extends State<RegisterScreen> {
         setState(() {
           shadowColor = Colors.black;
         });
+        return null;
       },
     );
   }
 
-  Widget _BuildPasswordField() {
+  // ignore: unused_element
+  Widget _buildPasswordField() {
     return TextFormField(
       decoration: InputDecoration(
         labelText: 'Senha',
@@ -106,6 +107,7 @@ class RegisterScreenState extends State<RegisterScreen> {
         setState(() {
           shadowColor = Colors.black;
         });
+        return null;
       },
       onSaved: (val) => _password = val,
       obscureText: esconderTexto,
@@ -163,8 +165,8 @@ class RegisterScreenState extends State<RegisterScreen> {
                                     fontWeight: FontWeight.bold, fontSize: 20),
                               ),
                             ])),
-                        ComponentWithShadow(_BuildNameField()),
-                        ComponentWithShadow(_BuildEmailField()),
+                        componentWithShadow(_buildNameField()),
+                        componentWithShadow(_buildEmailField()),
                         Material(
                           elevation: 8,
                           shadowColor: shadowColor,
@@ -201,6 +203,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                               setState(() {
                                 shadowColor = Colors.black;
                               });
+                              return null;
                             },
                             onSaved: (val) => _password = val,
                             obscureText: esconderTexto,
@@ -238,6 +241,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                                 shadowColor = Colors.transparent;
                                 return 'Senha obrigatoria';
                               }
+                              return null;
                             },
                             onSaved: (val) => _password = val,
                             obscureText: esconderTexto2,

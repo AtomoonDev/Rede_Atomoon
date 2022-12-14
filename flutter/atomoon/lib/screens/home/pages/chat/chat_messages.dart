@@ -12,9 +12,9 @@ class ChatMessages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
+      backgroundColor: const Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
+        backgroundColor: const Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
         title: const Text('Contato Atomoon'),
         elevation: 0,
         actions: [

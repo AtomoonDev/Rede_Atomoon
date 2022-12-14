@@ -2,7 +2,7 @@ import 'package:atomoon/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:atomoon/screens/home/pages/chat/components/styles.dart';
-import 'package:atomoon/screens/home/pages/chat/components/animated-dialog.dart';
+import 'package:atomoon/screens/home/pages/chat/components/animated_dialog.dart';
 
 class ChatWidgets {
   static Widget card({title, time, subtitle, onTap}) {
@@ -76,35 +76,35 @@ class ChatWidgets {
           if (check) const Spacer(),
           if (!check)
             const CircleAvatar(
+              backgroundColor: Colors.grey,
+              radius: 10,
               child: Icon(
                 Icons.person,
                 size: 13,
                 color: Colors.white,
               ),
-              backgroundColor: Colors.grey,
-              radius: 10,
             ),
           ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 250),
             child: Container(
               margin: const EdgeInsets.all(8),
               padding: const EdgeInsets.all(10),
+              decoration: Styles.messagesCardStyle(check),
               child: Text(
                 '$message\n\n$time',
                 style: TextStyle(color: check ? Colors.white : Colors.black),
               ),
-              decoration: Styles.messagesCardStyle(check),
             ),
           ),
           if (check)
             const CircleAvatar(
+              backgroundColor: Colors.grey,
+              radius: 10,
               child: Icon(
                 Icons.person,
                 size: 13,
                 color: Colors.white,
               ),
-              backgroundColor: Colors.grey,
-              radius: 10,
             ),
           if (!check) const Spacer(),
         ],
@@ -116,19 +116,19 @@ class ChatWidgets {
     final con = TextEditingController();
     return Container(
       margin: const EdgeInsets.all(5),
+      decoration: Styles.messageFieldCardStyle(),
       child: TextField(
         controller: con,
         decoration: Styles.messageTextFieldStyle(onSubmit: () {
           onSubmit(con);
         }),
       ),
-      decoration: Styles.messageFieldCardStyle(),
     );
   }
 
   static drawer(context) {
     return Drawer(
-      backgroundColor: Color.fromARGB(255, 36, 58, 105),
+      backgroundColor: const Color.fromARGB(255, 36, 58, 105),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 20),
@@ -136,22 +136,22 @@ class ChatWidgets {
             data: ThemeData.dark(),
             child: Column(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
+                  radius: 60,
+                  backgroundColor: Colors.grey,
                   child: Icon(
                     Icons.person,
                     size: 60,
                     color: Colors.white,
                   ),
-                  radius: 60,
-                  backgroundColor: Colors.grey,
                 ),
-                SizedBox(height: 10),
-                Divider(
+                const SizedBox(height: 10),
+                const Divider(
                   color: Colors.white,
                 ),
                 ListTile(
-                  leading: Icon(Icons.person),
-                  title: Text('Perfil'),
+                  leading: const Icon(Icons.person),
+                  title: const Text('Perfil'),
                   onTap: () {
                     Navigator.pushAndRemoveUntil(
                         context,
@@ -162,8 +162,8 @@ class ChatWidgets {
                   }, 
                 ),
                 ListTile(
-                  leading: Icon(Icons.logout),
-                  title: Text('Sair da conta'),
+                  leading: const Icon(Icons.logout),
+                  title: const Text('Sair da conta'),
                   onTap: () {
                                         Navigator.of(context).pushNamedAndRemoveUntil(
                         '/auth', (Route<dynamic> route) => false);
@@ -190,13 +190,13 @@ class ChatWidgets {
     final con = TextEditingController();
     return Container(
       margin: const EdgeInsets.all(10),
+      decoration: Styles.messageFieldCardStyle(),
       child: TextField(
         controller: con,
         /*decoration: Styles.searchTextFieldStyle(onSubmit: () {
           onSubmit(con);
         }),*/
       ),
-      decoration: Styles.messageFieldCardStyle(),
     );
   }
 }

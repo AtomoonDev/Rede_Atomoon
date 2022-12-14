@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:atomoon/config/constants.dart';
 import 'package:atomoon/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
           width: MediaQuery.of(context).size.width * 0.70,
           fit: BoxFit.cover,
         ),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         Image.asset(
           'lib/assets/images/logo_moon.png',
           width: 62,
@@ -64,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     logoAtoomon(),
-                    SizedBox(height: 80),
+                    const SizedBox(height: 80),
                   ],
                 )),
           ],
@@ -77,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 5), () {
       //Navigator.of(context).pushReplacement(CustomPage);
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (BuildContext context) => WelcomeScreen()));
+          builder: (BuildContext context) => const WelcomeScreen()));
     });
   }
 }

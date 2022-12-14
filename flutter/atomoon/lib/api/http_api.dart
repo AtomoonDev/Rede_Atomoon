@@ -14,7 +14,7 @@ class LoginApi {
       var response = await http.post(Uri.parse(urlAPI),
           headers: {"Content-Type": "application/json"}, body: body);
 
-      print("${response.statusCode}");
+      //print("${response.statusCode}");
 
       Map listaResposta = json.decode(response.body);
       if (response.statusCode == 200) {
@@ -22,8 +22,9 @@ class LoginApi {
         return ApiResponse.statusOk(usuario);
       }
       return ApiResponse.error("Erro ao fazer o login");
+    // ignore: unused_catch_stack
     } catch (error, exception) {
-      print("Erro : $error > $exception ");
+      //print("Erro : $error > $exception ");
       return ApiResponse.error("Sem comunicação ... tente mais tarde... ");
     }
   }

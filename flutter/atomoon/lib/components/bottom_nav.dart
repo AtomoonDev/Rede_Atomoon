@@ -6,7 +6,7 @@ class BottomNav extends StatelessWidget {
   final String text;
   final List<BottomNavigationBarItem> btnNavItems;
 
-  BottomNav(
+  const BottomNav(
       {Key? key,
       required this.onTap,
       required this.text,

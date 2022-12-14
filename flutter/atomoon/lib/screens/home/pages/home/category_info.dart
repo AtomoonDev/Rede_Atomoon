@@ -1,15 +1,9 @@
+// display info about categorie
 import 'package:flutter/material.dart';
 import 'package:atomoon/config/constants.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-//import 'dart:convert';
-
-import '../../../../components/category_card.dart';
-
-class HomePage extends StatelessWidget {
-  //static const _padding = 24.0;
-  //static const _spacing = 24.0;
-  const HomePage({super.key});
+class CategoryInfo extends StatelessWidget {
+  CategoryInfo({super.key});
 
   Widget header() {
     return Padding(
@@ -68,92 +62,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget categoriesTab(BuildContext context) {
-    return Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colorsys.lightGrey))),
-        child: DefaultTabController(
-            length: 2,
-            child: TabBar(
-                indicator: const UnderlineTabIndicator(
-                  borderSide: BorderSide(
-                    width: 3,
-                    color: Colorsys.cyan,
-                  ),
-                  insets: EdgeInsets.only(left: 0, right: 75, top: 10),
-                ),
-                labelPadding: const EdgeInsets.only(left: 0, right: 16),
-                isScrollable: true,
-                labelColor: Colors.black,
-                unselectedLabelColor: Colors.grey,
-                labelStyle: GoogleFonts.openSans(
-                    fontSize: 15, fontWeight: FontWeight.bold),
-                unselectedLabelStyle: GoogleFonts.openSans(
-                    fontSize: 15, fontWeight: FontWeight.w600),
-                tabs: const [
-                  SizedBox(
-                    height: 35.0,
-                    child: Tab(
-                      child: Text(
-                        "Recomendadas",
-                        style: TextStyle(
-                            color: Colorsys.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 35.0,
-                    child: Tab(
-                      child: Text(
-                        "Favoritadas",
-                        style: TextStyle(
-                            color: Colorsys.grey,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14),
-                      ),
-                    ),
-                  )
-                ])));
-  }
-
-  Widget cards() {
-    /*
-    List data;
-    String rawJson =
-        '[{"text":"Jardineiro","image": "lib/assets/images/card_img1.png"},' +
-            '{"text":"Jardineiro","image": "lib/assets/images/card_img1.png"},' +
-            '{"text":"Jardineiro","image": "lib/assets/images/card_img1.png"},' +
-            '{"text":"Jardineiro","image": "lib/assets/images/card_img1.png"}' +
-            ']';
-
-    data = json.decode(rawJson);
-
-    print(data);
-    print("AQUI6");
-
-    return ListView.builder(
-      itemCount: data.length,
-      itemBuilder: (context, index) {
-        return Text(index.toString());
-      },
-    );*/
-
-    return Column(children: const [
-      CategoryCard(
-          text: 'Jardineiro(a)',
-          image: AssetImage("lib/assets/images/card_img1.png")),
-      CategoryCard(
-          text: 'Faxineiro(a)',
-          image: AssetImage("lib/assets/images/card_img2.png")),
-      CategoryCard(
-          text: 'Encanador(a)',
-          image: AssetImage("lib/assets/images/card_img3.png")),
-    ]);
-  }
-
   Widget cardWhatYouWant(BuildContext context) {
     return Container(
       height: 100,
@@ -178,13 +86,60 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  // lista com trabalhadores
+  final List<String> workers = <String>['João Paulo', 'Maria', 'Pedro'];
+
+  Widget _buildWorkerCard(String worker) {
+    String categoria = 'Encanador';
+    String descricao = 'Trabalho com encanamento';
+    return Container(
+      height: kSpacingUnit * 12,
+      width: kSpacingUnit * 12,
+      margin: const EdgeInsets.only(top: kSpacingUnit * 0.08),
+      child: Stack(
+        children: <Widget>[
+          // card with name, categorie and description
+          const CircleAvatar(
+            radius: kSpacingUnit * 6,
+            backgroundImage: AssetImage('lib/assets/images/profile_icon.png'),
+          ),
+          Text(worker,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              )),
+          Text(categoria,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              )),
+          Text(descricao,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              )),
+        ],
+      ),
+    );
+  }
+
+  Widget cards() {
+    return Expanded(
+      child: Column(
+        children: <Widget>[
+          // interate listr
+          for (final worker in workers) _buildWorkerCard(worker),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: CustomScrollView(slivers: [
       SliverList(
           delegate: SliverChildListDelegate([
-        const SizedBox(height: 30),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -203,12 +158,9 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: 24),
                   searchBar(),
                   const SizedBox(height: 30),
-                  categoriesTab(context),
-                  const SizedBox(height: 25),
                   cardWhatYouWant(context),
                   const SizedBox(height: 10),
-                  cards(
-                  ),
+                  cards(),
                   const SizedBox(height: 10),
                 ],
               ),

@@ -1,6 +1,5 @@
 import 'package:atomoon/config/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class ProfileListItem extends StatelessWidget {
@@ -34,17 +33,17 @@ class ProfileListItem extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Icon(
-            this.icon,
+            icon,
             size: kSpacingUnit * 2.5,
             color: Colors.white,
           ),
           const SizedBox(width: kSpacingUnit * 1.5),
           Text(
-            this.text,
+            text,
             style: const TextStyle(color: Colors.white),
           ),
           const Spacer(),
-          if (this.hasNavigation)
+          if (hasNavigation)
             const Icon(
               LineAwesomeIcons.arrow_right,
               size: kSpacingUnit * 2.5,

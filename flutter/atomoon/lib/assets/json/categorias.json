@@ -1,0 +1,59 @@
+{
+    "Jardineiro": {
+        "id": 0,
+        "name": "Jardineiro",
+        "description": "Jardineiro",
+        "icon": "https://www.google.com/s2/favicons?domain=www.google.com",
+        "url": "https://www.google.com/search?q=jardineiro",
+        "color": "#4285F4"
+    },
+    
+    "Faxineiro": {
+        "id": 1,
+        "name": "Faxineiro",
+        "description": "Faxineiro",
+        "icon": "https://www.google.com/s2/favicons?domain=www.google.com",
+        "url": "https://www.google.com/search?q=faxineiro",
+        "color": "#4285F4"
+    },
+    "Encanador": {
+        "id": 2,
+        "name": "Encanador",
+        "description": "Encanador",
+        "icon": "https://www.google.com/s2/favicons?domain=www.google.com",
+        "url": "https://www.google.com/search?q=encanador",
+        "color": "#4285F4"
+    },
+    "Pedreiro": {
+        "id": 3,
+        "name": "Pedreiro",
+        "description": "Pedreiro",
+        "icon": "https://www.google.com/s2/favicons?domain=www.google.com",
+        "url": "https://www.google.com/search?q=pedreiro",
+        "color": "#4285F4"
+    },
+    "Pintor":{
+        "id": 4,
+        "name": "Pintor",
+        "description": "Pintor",
+        "icon": "https://www.google.com/s2/favicons?domain=www.google.com",
+        "url": "https://www.google.com/search?q=pintor",
+        "color": "#4285F4"
+    },
+    "Eletricista":{
+        "id": 5,
+        "name": "Eletricista",
+        "description": "Eletricista",
+        "icon": "https://www.google.com/s2/favicons?domain=www.google.com",
+        "url": "https://www.google.com/search?q=eletricista",
+        "color": "#4285F4"
+    },
+    "Cozinheiro": {
+        "id": 6,
+        "name": "Cozinheiro",
+        "description": "Cozinheiro",
+        "icon": "https://www.google.com/s2/favicons?domain=www.google.com",
+        "url": "https://www.google.com/search?q=cozinheira",
+        "color": "#4285F4"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "Joao": {
+        "id": "1",
+        "username": "Joao",
+        "idade": 20,
+        "sexo": "M",
+        "categoria": "Encanador",
+        "preço": "R$ 100,00 por Hora",
+        "disponibilidade": "segunda a sexta",
+        "foto": ""
+    },
+    "Maria": {
+        "id": "2",
+        "username": "Maria",
+        "idade": 25,
+        "sexo": "F",
+        "categoria": "Faxineiro",
+        "preço": "R$ 100,00 por Hora",
+        "disponibilidade": "segunda a sexta",
+        "foto": ""
+    },
+    "Pedro": {
+        "id": "3",
+        "username": "Pedro",
+        "idade": 30,
+        "sexo": "M",
+        "categoria": "Jardineiro",
+        "preço": "R$ 100,00 por Hora",
+        "disponibilidade": "segunda a sexta",
+        "foto": ""
+    },
+    "Ana": {
+        "id": "4",
+        "username": "Ana",
+        "idade": 35,
+        "sexo": "F",
+        "categoria": "Cozinheiro",
+        "preço": "R$ 100,00 por Hora",
+        "disponibilidade": "segunda a sexta",
+        "foto": ""
+    }
+}

@@ -15,9 +15,9 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
+      backgroundColor: const Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
+        backgroundColor: const Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
         title: const Text('Chat'),
         elevation: 0,
         centerTitle: true,
@@ -48,7 +48,7 @@ class _ChatPageState extends State<ChatPage> {
                 Container(
                   margin: const EdgeInsets.all(0),
                   child: Container(
-                    color: Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
+                    color: const Color.fromARGB(255, 36, 58, 105).withOpacity(0.4),
                     padding: const EdgeInsets.all(8),
                     height: 160,
                     child: Column(
@@ -90,7 +90,7 @@ class _ChatPageState extends State<ChatPage> {
                           child: Text(
                             'Contatos',
                             style: Styles.h1().copyWith(
-                                color: Color.fromARGB(255, 36, 58, 105)),
+                                color: const Color.fromARGB(255, 36, 58, 105)),
                           ),
                         ),
                         Expanded(

@@ -5,7 +5,7 @@ class RoundedDFBtn extends StatelessWidget {
   final String text;
   final bool isOutlinedBtn;
 
-  RoundedDFBtn({
+  const RoundedDFBtn({
     Key? key,
     required this.onPressed,
     required this.text,

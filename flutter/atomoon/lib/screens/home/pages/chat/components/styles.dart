@@ -16,14 +16,14 @@ class Styles {
   static messagesCardStyle(check) {
     return BoxDecoration(
       borderRadius: BorderRadius.circular(10),
-      color: check ? Color.fromARGB(255, 36, 58, 105).withOpacity(0.3) : Colors.grey.shade300,
+      color: check ? const Color.fromARGB(255, 36, 58, 105).withOpacity(0.3) : Colors.grey.shade300,
     );
   }
 
   static messageFieldCardStyle() {
     return BoxDecoration(
         color: Colors.white,
-        border: Border.all(color: Color.fromARGB(255, 36, 58, 105),),
+        border: Border.all(color: const Color.fromARGB(255, 36, 58, 105),),
         borderRadius: BorderRadius.circular(10));
   }
 
@@ -38,11 +38,11 @@ class Styles {
   static searchField({Function(String)? onChange}) {
     return Container(
       margin: const EdgeInsets.all(10),
+      decoration: Styles.messageFieldCardStyle(),
       child: TextField(
        onChanged: onChange,
         //decoration: Styles.searchTextFieldStyle(),
       ),
-      decoration: Styles.messageFieldCardStyle(),
     );
   }
 }

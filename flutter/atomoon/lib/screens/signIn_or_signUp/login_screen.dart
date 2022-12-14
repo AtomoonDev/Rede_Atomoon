@@ -1,8 +1,8 @@
 //import 'package:atomoon/api/http_api.dart';
 //import 'package:atomoon/models/api_response.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'dart:convert';
+//import 'package:flutter/services.dart';
+//import 'dart:convert';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -16,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final senhaController = TextEditingController();
 
 
+  // ignore: unused_field
   String? _password = " ";
   bool esconderTexto = true;
   bool esconderTexto2 = true;
@@ -23,8 +24,8 @@ class _LoginScreenState extends State<LoginScreen> {
   Color shadowColor = Colors.black;
 
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/sample.json');
-    final data = await json.decode(response);
+    //final String response = await rootBundle.loadString('assets/sample.json');
+    //final data = await json.decode(response);
 // ...
   }
 

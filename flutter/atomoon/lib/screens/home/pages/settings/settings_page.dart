@@ -5,8 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsPage extends StatefulWidget {
+  const SettingsPage({super.key});
+
   @override
-  _SettingsPageState createState() => _SettingsPageState();
+  State<SettingsPage> createState() => _SettingsPageState();
 }
 
 class _SettingsPageState extends State<SettingsPage> {
@@ -87,8 +89,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         ),
                       ),
                       leading: const CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            'https://images.unsplash.com/photo-1528953030358-b0c7de371f1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=651&q=80'),
+                        backgroundImage: AssetImage('lib/assets/images/profile_icon.png'),
                       ),
                       trailing: const Icon(
                         Icons.edit,
@@ -165,7 +166,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                   ),
                   SwitchListTile(
-                    activeColor: Color.fromARGB(255, 255, 187, 0),
+                    activeColor: const Color.fromARGB(255, 255, 187, 0),
                     contentPadding: const EdgeInsets.all(0),
                     value: _notification,
                     title: const Text("Receber notificações"),
@@ -176,10 +177,10 @@ class _SettingsPageState extends State<SettingsPage> {
                     },
                   ),
                   SwitchListTile(
-                    activeColor: Color.fromARGB(255, 255, 187, 0),
-                    contentPadding: EdgeInsets.all(0),
+                    activeColor: const Color.fromARGB(255, 255, 187, 0),
+                    contentPadding: const EdgeInsets.all(0),
                     value: _news,
-                    title: Text("Receber noticias"),
+                    title: const Text("Receber noticias"),
                     onChanged: (val) {
                       setState(() {
                         _news = val;
@@ -187,7 +188,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     },
                   ),
                   SwitchListTile(
-                    activeColor: Color.fromARGB(255, 255, 187, 0),
+                    activeColor: const Color.fromARGB(255, 255, 187, 0),
                     contentPadding: const EdgeInsets.all(0),
                     value: _offer,
                     title: const Text("Receber ofertas"),
@@ -198,10 +199,10 @@ class _SettingsPageState extends State<SettingsPage> {
                     },
                   ),
                   SwitchListTile(
-                    activeColor: Color.fromARGB(255, 255, 187, 0),
-                    contentPadding: EdgeInsets.all(0),
+                    activeColor: const Color.fromARGB(255, 255, 187, 0),
+                    contentPadding: const EdgeInsets.all(0),
                     value: _appUpdate,
-                    title: Text("Receber atualizações de versão do app"),
+                    title: const Text("Receber atualizações de versão do app"),
                     onChanged: (val) {
                       setState(() {
                         _appUpdate = val;

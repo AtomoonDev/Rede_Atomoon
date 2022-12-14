@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  static const routeName = '/home';
+  //static const routeName = '/home';
 
   int currentPage = 0;
   late PageController pc;
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.notification_add_rounded), color: Color.fromARGB(255, 64, 93, 156),
+          icon: const Icon(Icons.notification_add_rounded), color: const Color.fromARGB(255, 64, 93, 156),
         ),
       ],
     );
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
       const HomePage(),
       const ChatPage(),
       const ProfilePage(),
-      SettingsPage()
+      const SettingsPage()
     ];
 
     setPaginaAtual(int pagina) {

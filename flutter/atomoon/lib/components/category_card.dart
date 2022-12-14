@@ -1,4 +1,3 @@
-import 'package:atomoon/screens/home/home_screen.dart';
 import 'package:atomoon/screens/telas.dart';
 import 'package:flutter/material.dart';
 
@@ -21,8 +20,7 @@ class CategoryCard extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) =>
-                    TelasTest()) // apenas arrumar a rota, essa que coloquei é para DEBUG
+                builder: (context) => const TelasTest())
             )
       },
       child: Container(

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:atomoon/config/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                   onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SigninOrSignupScreen(),
+                          builder: (context) => const SigninOrSignupScreen(),
                         ),
                       ),
                   child: Row(
