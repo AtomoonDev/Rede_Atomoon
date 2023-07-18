@@ -8,6 +8,7 @@ class LoginApi {
       String user, String password) async {
     try {
       const urlAPI = 'https://localhost:5555/api/login/auth';
+      
       Map params = {'username': user, 'senha': password};
       var body = json.encode(params);
 
