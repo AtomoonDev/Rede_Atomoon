@@ -21,7 +21,12 @@ Como proprietários deste empreendimento, vamos construir uma plataforma que nã
 **"Criar novos foguetes"** para ele, com todo o seu potencial e prosperar em um ambiente e mercado dinâmico e inclusivo.
 
 ## Quem é a Atomoon
+<div align="left">
+ <img align="right" alt="Project Banner" title="" src="https://github.com/AtomoonDev/Rede_Atomoon/assets/53992405/86ec852b-6092-423f-a402-bfce8add708b" width="200px" />
+
 Na Atomoon, a viagem não é apenas nossa - é de todos, a essência do que somos e do que representamos é a colaboração e uma rede. A Atomoon não é construída exclusivamente por nós, mas sim pelos próprios profissionais autônomos, cujas habilidades e contribuições são a base e o combustível para o nossos foguetes.
+</div>
+
 
 ## Time Atomoon 👩‍🚀🚀
 | [<img src="https://github.com/oGaabs.png?size=115" width=115><br><sub>@Gabs</sub>](https://github.com/oGaabs) | [<img src="https://github.com/mariaxuxu.png?size=115" width=115><br><sub>@Maria Clara</sub>](https://github.com/mariaxuxu) | [<img src="https://github.com/taylorburgues.png?size=115" width=115><br><sub>@TaylorBurgues</sub>](https://github.com/taylorburgues) 
