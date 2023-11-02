@@ -3,22 +3,33 @@
     <img align="center" alt="Foto da Lua"  height="70" width="70" src="https://user-images.githubusercontent.com/53992405/176083448-76a0f084-a0ed-43f4-9bcd-20c77eb3ad9e.svg"/>
 </div>
 
-# TCC-Atomoon
+# Atomoon 🚀🌐
 
-Este repositório é o conjunto de aplicações que compõem a nossa rede Atomoon, esse mesmo projeto foi desenvolvido em trio, durante as matérias de Trabalho Profissional de Conclusão de Curso I e II, com orientações dos professores André e Chico no COTUCA.
+A Rede Atomoon é muito mais do que um projeto, é uma jornada ambiciosa que nos leva em direção à Lua. Nosso objetivo é **transformar** a forma como os profissionais autônomos trabalham, conectando e mostrando esses **profissionais ao mundo**. Acreditamos que, ao fazer isso, estamos alcançando as estrelas e explorando novos horizontes.
 
-O projeto está em desenvolvimento e pretende-se desenvolver uma rede que possa trazer maior visibilidade aos trabalhadores autônomos, com enfoque em acessibilidade e extrema amplitude de trabalhos, de forma a garantir um espaço de trabalho profissional, em que se possa exercer e desenvolver suas habilidades profissionais, melhorando a sua busca e contato entre clientes/serviços. Como implementação final, visamos a integração do back-end com front-end, desenvolvimento web e mobile, e por fim, manter nossa rede online e funcional ao público, sendo trabalhadas as Linguagens HTML/CSS, Javascript, Dart, Java e JSON, e ferramentas como Flutter, Node, SQL, entre outras.
+Como proprietários deste empreendimento, vamos construir uma plataforma que não apenas conecte esses profissionais ao mundo, mas vamos
+**"Criar novos foguetes"** para ele, com todo o seu potencial e prosperar em um ambiente e mercado dinâmico e inclusivo.
 
+## Quem é a Atomoon
+Na Atomoon, a viagem não é apenas nossa - é de todos, a essência do que somos e do que representamos é a colaboração e uma rede. A Atomoon não é construída exclusivamente por nós, mas sim pelos próprios profissionais autônomos, cujas habilidades e contribuições são a base e o combustível para o nosso foguetes.
+
+## Time Atomoon 👩‍🚀🚀
+| [<img src="https://github.com/oGaabs.png?size=115" width=115><br><sub>@Gabs</sub>](https://github.com/oGaabs) | [<img src="https://github.com/mariaxuxu.png?size=115" width=115><br><sub>@Maria Clara</sub>](https://github.com/mariaxuxu) | [<img src="https://github.com/taylorburgues.png?size=115" width=115><br><sub>@TaylorBurgues</sub>](https://github.com/taylorburgues) 
+| :---: | :---: | :---: |
+| 👨‍🚀💙 | 👩‍🚀💙 | 👨‍🚀💙 |
+| :---: | :---: | :---: |
+
+ 
 ## Contributing
 
-Fique à vontade para enviar sugestões, dicas ou até mesmo reconstruir o código, mas mastenha a autoria do projeto e não utiliza-o de maneira indevida ou de forma a prejudicar o projeto ou marca.
+Você é parte fundamental da nossa jornada. Fique à vontade para enviar sugestões, críticas, dicas ou até mesmo um pull-request. Estamos ansiosos para aprimorar e crescer juntos.
 
 #### Networks Gabriel:
 
-[<img alt="GitHub followers Gabriel" src="https://img.shields.io/github/followers/PuniGC?label=Follow&style=social" height="22" title="Follow me"/>][github]
+[<img alt="GitHub followers Gabriel" src="https://img.shields.io/github/followers/oGaabs?label=Follow&style=social" height="22" title="Follow me"/>][github]
 [<img alt="Instagram Gabriel" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&link=instagram.com/gabrielsants_dev/" height="22" />](https://www.instagram.com/gabrielsants_dev/)
 [<img alt="Mail to Gabriel" src="https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white" height="22" title="gabriel04.ok@gmail.com" />][email]
-[<img alt="Linkedin Gabriel" src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriel-santana-silva-1205461a3/" height="22" />][linkedin]
+[<img alt="Linkedin Gabriel" src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriel-santana-silva/" height="22" />][linkedin]
 
 #### Networks Maria:
 
